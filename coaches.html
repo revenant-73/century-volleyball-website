@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Century High School Athletics</title>
+    <title>Coaches Portal - Century High School Athletics</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="Official website of Century High School Athletics featuring boys and girls volleyball teams and more.">
+    <meta name="description" content="Coaches portal for Century High School Athletics.">
 </head>
 <body>
     <header class="site-header">
@@ -31,43 +31,32 @@
         </div>
     </header>
 
-    <section class="hero">
-        <img src="images/official-century-logo.png" alt="Century High School Logo" class="hero-logo">
-        <h1>Century Volleyball</h1>
-        
-        <div class="hero-tagline">
-            <p>Play Brave, Play Free, Play the Century Way</p>
-        </div>
-
-        <div class="hero-buttons">
-            <a href="girls-volleyball.html">
-                <!-- Volleyball icon (Heroicons solid volleyball) -->
-                <svg viewBox="0 0 24 24"><path d="M12 2c-.58 0-1.16.04-1.72.1a10.002 10.002 0 0 1 9.62 6.68A9.98 9.98 0 0 0 12 2zm0 20a10 10 0 0 1-8.7-4.93 10.004 10.004 0 0 0 17.4 0A10 10 0 0 1 12 22zm-8.64-6.5A10.002 10.002 0 0 1 4 12c0-.86.1-1.7.29-2.5a9.972 9.972 0 0 0-.93 6zM12 4c-.73 0-1.45.1-2.13.28a9.996 9.996 0 0 0 8.29 8.28c.18-.68.28-1.4.28-2.13A8 8 0 0 0 12 4zm0 16c.73 0 1.45-.1 2.13-.28a9.996 9.996 0 0 0-8.29-8.28A7.958 7.958 0 0 0 4 12a8 8 0 0 0 8 8zm-5.44-3.44a8.004 8.004 0 0 1 0-11.32 10.002 10.002 0 0 0 0 11.32z"/></svg>
-                Girls Volleyball
-            </a>
-            <a href="boys-volleyball.html">
-                <svg viewBox="0 0 24 24"><path d="M12 2c-.58 0-1.16.04-1.72.1a10.002 10.002 0 0 1 9.62 6.68A9.98 9.98 0 0 0 12 2zm0 20a10 10 0 0 1-8.7-4.93 10.004 10.004 0 0 0 17.4 0A10 10 0 0 1 12 22zm-8.64-6.5A10.002 10.002 0 0 1 4 12c0-.86.1-1.7.29-2.5a9.972 9.972 0 0 0-.93 6zM12 4c-.73 0-1.45.1-2.13.28a9.996 9.996 0 0 0 8.29 8.28c.18-.68.28-1.4.28-2.13A8 8 0 0 0 12 4zm0 16c.73 0 1.45-.1 2.13-.28a9.996 9.996 0 0 0-8.29-8.28A7.958 7.958 0 0 0 4 12a8 8 0 0 0 8 8zm-5.44-3.44a8.004 8.004 0 0 1 0-11.32 10.002 10.002 0 0 0 0 11.32z"/></svg>
-                Boys Volleyball
-            </a>
-        </div>
+    <section class="simple-header">
+        <h1>Coaches Portal</h1>
     </section>
 
     <main>
         <div class="container">
-            <section class="program-summary">
-                <h2>Welcome to Century Volleyball</h2>
-                <p>At Century High School Volleyball, we believe in more than wins—we believe in building athletes who are brave, adaptable, and joyful learners. Our program is grounded in a coaching philosophy that values growth over perfection, accountability without shame, and competition without ego.</p>
-                <p>We train through the game, not apart from it. Every practice reflects the realities of competition, emphasizing decision-making, adaptability, and learning in context. We challenge our athletes to think, move, and lead—not just execute plays, but solve the game as it unfolds.</p>
-                <p>Our core values guide everything we do:</p>
-                <ul>
-                    <li><strong>Joy in the Game:</strong> Finding joy in the process, in the struggle, and in every moment we grow together.</li>
-                    <li><strong>Effort with Intention:</strong> Bringing purpose to every rep, every read, every action.</li>
-                    <li><strong>Growth Over Perfection:</strong> Embracing mistakes as fuel for improvement.</li>
-                    <li><strong>Accountability Without Shame:</strong> Holding high standards while supporting one another without judgment.</li>
-                    <li><strong>Team Over Ego:</strong> Trusting that every role, every voice, and every connection matters.</li>
-                </ul>
-                <p>Success at Century Volleyball is measured not just in scores, but in the culture we build, the confidence we foster, and the growth our athletes carry beyond the court. We strive to create a program where every athlete leaves better than they arrived—as players, as teammates, and as people.</p>
-                <p>Join us as we play brave, play free, and play the Century way.</p>
+            <section class="login-section">
+                <div class="login-container">
+                    <h2>Coach Login</h2>
+                    <p class="intro-text">Welcome to the Century Volleyball coaches portal. Please enter your credentials to access coaching resources.</p>
+                    
+                    <div id="login-error" class="error-message" style="display: none;">
+                        Incorrect password. Please try again or contact the athletic director.
+                    </div>
+                    
+                    <form id="login-form" class="login-form">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn login-button">
+                            <svg viewBox="0 0 24 24"><path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/></svg>
+                            Login
+                        </button>
+                    </form>
+                </div>
             </section>
         </div>
     </main>
@@ -99,5 +88,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/coaches-auth.js"></script>
 </body>
 </html>

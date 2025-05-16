@@ -900,25 +900,37 @@ main {
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: visible;
 }
 
 .coach-image {
-    flex: 0 0 300px;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 200px;
+    overflow: visible;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .coach-image:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .coach-image img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.coach-image:hover img {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .coach-info {
@@ -958,6 +970,31 @@ main {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+    
+    .coach-image {
+        flex: 0 0 150px;
+        margin-bottom: var(--spacing-md);
+        max-width: 150px;
+        width: 150px;
+    }
+    
+    .coach-image img {
+        max-width: 150px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .coach-info {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .coach-image {
+        flex: 0 0 150px;
+        margin-bottom: var(--spacing-md);
     }
     
     .coach-image {
@@ -1364,6 +1401,10 @@ footer {
         font-size: 2rem;
     }
     
+    h3 {
+        font-size: 1.5rem;
+    }
+    
     .hero-logo {
         max-width: 150px;
     }
@@ -1374,6 +1415,19 @@ footer {
     
     .hamburger {
         display: block;
+    }
+    
+    .roster-list {
+        padding: var(--spacing-sm);
+    }
+    
+    .player-item {
+        flex-wrap: wrap;
+    }
+    
+    .team-philosophy {
+        font-size: 1.1rem;
+        padding: 0 var(--spacing-sm);
     }
     
     nav ul {
@@ -1395,6 +1449,10 @@ footer {
         right: 0;
     }
     
+    body.nav-open {
+        overflow: hidden;
+    }
+    
     .contact-section {
         grid-template-columns: 1fr;
     }
@@ -1414,6 +1472,77 @@ footer {
     header h1 {
         font-size: 2rem;
     }
+    
+    .coach-image {
+        flex: 0 0 120px;
+        max-width: 120px;
+        width: 120px;
+    }
+    
+    .coach-image img {
+        max-width: 120px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .coach-info h4 {
+        font-size: 1.3rem;
+    }
+    
+    .coach-title, .coach-motto {
+        font-size: 0.9rem;
+    }
+    
+    .coach-bio {
+        padding: var(--spacing-xs);
+    }
+    
+    .roster-list {
+        padding: var(--spacing-xs);
+    }
+    
+    .player-item {
+        padding: 0.5rem;
+    }
+    
+    .player-number {
+        font-size: 1.2rem;
+    }
+    
+    .player-name {
+        font-size: 0.9rem;
+    }
+    
+    .player-position {
+        font-size: 0.8rem;
+    }
+    
+    .team-philosophy {
+        font-size: 1rem;
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .team-photo {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .team-photo-caption {
+        font-size: 0.9rem;
+    }
+    
+    .simple-header {
+        height: 20vh;
+        min-height: 150px;
+    }
+    
+    .simple-header h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: var(--spacing-sm) 0;
+    }
+}
     
     .hero-buttons {
         flex-direction: column;
@@ -1452,5 +1581,200 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Login Page Styles */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    padding: var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.login-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.login-form {
+    margin-top: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    color: #fff;
+    font-size: 1rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 153, 153, 0.2);
+}
+
+.login-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px;
+    margin-top: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.error-message {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff6b6b;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    border-left: 3px solid #ff6b6b;
+}
+
+/* Coaches Portal Styles */
+.coach-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--spacing-md);
+}
+
+.resources-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.resource-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+}
+
+.resource-card p {
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.resource-card .btn {
+    align-self: flex-start;
+}
+
+.document-list {
+    list-style: none;
+    margin: var(--spacing-md) 0;
+}
+
+.document-list li {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease;
+}
+
+.document-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.document-list svg {
+    width: 24px;
+    height: 24px;
+    margin-right: var(--spacing-sm);
+    fill: var(--primary-color);
+}
+
+.document-list span {
+    flex-grow: 1;
+}
+
+.document-download {
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.document-download:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .login-container {
+        padding: var(--spacing-md);
     }
 }
