@@ -126,10 +126,12 @@ button:hover, .btn:hover {
     transform: translateY(-2px);
 }
 
-/* Schedule Button */
-.schedule-button-container {
+/* Team Links */
+.team-links-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
     margin: var(--spacing-md) 0;
 }
 
@@ -149,6 +151,9 @@ button:hover, .btn:hover {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
 }
 
 .schedule-button::before {
@@ -184,11 +189,51 @@ button:hover, .btn:hover {
     fill: currentColor;
 }
 
-/* Responsive styles for schedule button */
+.spond-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+.spond-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.spond-icon {
+    width: 1.2em;
+    height: 1.2em;
+    fill: currentColor;
+    opacity: 0.8;
+}
+
+.spond-link:hover .spond-icon {
+    opacity: 1;
+}
+
+/* Responsive styles for team links */
 @media (max-width: 768px) {
     .schedule-button {
         padding: 0.9rem 1.5rem;
         font-size: 1rem;
+    }
+    
+    .spond-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -197,7 +242,12 @@ button:hover, .btn:hover {
         padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
         width: 100%;
-        justify-content: center;
+    }
+    
+    .spond-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        width: 100%;
     }
 }
 
@@ -441,6 +491,93 @@ svg {
     width: 1.2em;
     height: 1.2em;
     fill: currentColor;
+}
+
+/* Spond Announcement */
+.spond-announcement {
+    background: linear-gradient(to right, rgba(0, 153, 153, 0.1), rgba(0, 153, 153, 0.2), rgba(0, 153, 153, 0.1));
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-md);
+    border-top: 1px solid rgba(0, 153, 153, 0.3);
+    border-bottom: 1px solid rgba(0, 153, 153, 0.3);
+}
+
+.announcement-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.announcement-content h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.6rem;
+}
+
+.announcement-content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.announcement-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.spond-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    color: #fff;
+}
+
+.girls-button {
+    background: #e91e63; /* Pink for girls */
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+}
+
+.boys-button {
+    background: #2196f3; /* Blue for boys */
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+}
+
+.spond-button:hover {
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.girls-button:hover {
+    background: #d81b60;
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4);
+}
+
+.boys-button:hover {
+    background: #1e88e5;
+    box-shadow: 0 6px 15px rgba(33, 150, 243, 0.4);
+}
+
+@media (max-width: 768px) {
+    .announcement-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .spond-button {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Main Content */
@@ -1341,6 +1478,20 @@ footer {
 .social-icons {
     display: flex;
     gap: var(--spacing-md);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent-color);
 }
 
 .social-icons a {
