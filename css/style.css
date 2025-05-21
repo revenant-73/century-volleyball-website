@@ -1305,6 +1305,15 @@ main {
     gap: var(--spacing-lg);
 }
 
+.contact-info-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .contact-info {
     background: rgba(255, 255, 255, 0.05);
     padding: var(--spacing-md);
@@ -1316,6 +1325,232 @@ main {
 .contact-info:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Contact Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-card:hover .contact-item-icon {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+.contact-card-header {
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.contact-card:hover .contact-card-header::before {
+    opacity: 0.6;
+}
+
+.contact-card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-icon svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.contact-card-content {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.contact-item-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.contact-item-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.contact-value {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #fff;
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
+
+.address-item {
+    align-items: center;
+}
+
+.address-line {
+    margin-bottom: 0.25rem;
+}
+
+.address-line:last-of-type {
+    margin-bottom: 0.75rem;
+}
+
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: 0.75rem;
+}
+
+.map-link:hover {
+    background: #00b3b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 153, 153, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 153, 153, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 153, 153, 0);
+    }
+}
+
+.map-link {
+    animation: pulse 3s infinite;
+}
+
+/* Team-specific styling */
+.girls-team {
+    background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+}
+
+.boys-team {
+    background: linear-gradient(135deg, #2196f3 0%, #3f51b5 100%);
+}
+
+.athletic-dept {
+    background: linear-gradient(135deg, #ff9800 0%, #f44336 100%);
+}
+
+.school-address {
+    background: linear-gradient(135deg, #4caf50 0%, #009688 100%);
+}
+
+@media (max-width: 768px) {
+    .contact-info-full {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1509,6 +1744,22 @@ footer {
 .social-icons a:hover {
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-section .social-icons {
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.social-section .social-icons a {
+    width: auto;
+    height: auto;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .social-icon-instagram:hover {
