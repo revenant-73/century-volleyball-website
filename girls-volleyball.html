@@ -38,6 +38,16 @@
     <section class="simple-header">
         <h1>Girls Volleyball</h1>
     </section>
+    
+    <div class="summer-schedule-button-container">
+        <button id="summerScheduleBtn" class="summer-schedule-button">
+            <svg viewBox="0 0 24 24" class="summer-icon">
+                <path d="M19,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,15a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V10H20Zm0-11H4V7A1,1,0,0,1,5,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h2a1,1,0,0,1,1,1Z"/>
+                <path d="M7,14a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1V13a1,1,0,0,0-1-1H8a1,1,0,0,0-1,1Zm0,4a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1V17a1,1,0,0,0-1-1H8a1,1,0,0,0-1,1Zm5-4a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V13a1,1,0,0,0-1-1H13a1,1,0,0,0-1,1Z"/>
+            </svg>
+            Summer Schedule & Tryouts
+        </button>
+    </div>
 
     <div class="container team-banner-image">
         <img src="images/century-girls-team-1.jpg" alt="Century Girls Volleyball Team" class="full-width-image">
@@ -427,6 +437,101 @@
         </div>
     </footer>
 
+    <!-- Summer Schedule Modal -->
+    <div id="summerScheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Summer 2024 Schedule</h3>
+            
+            <div class="schedule-item">
+                <div class="schedule-icon-container">
+                    <svg viewBox="0 0 24 24" class="schedule-detail-icon">
+                        <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
+                        <path d="M12,6a1,1,0,0,0-1,1v5a1,1,0,0,0,.293.707l3,3a1,1,0,0,0,1.414-1.414L13,11.586V7A1,1,0,0,0,12,6Z"/>
+                    </svg>
+                </div>
+                <div class="schedule-details">
+                    <h4>Open Gyms</h4>
+                    <p>Tuesday-Thursday, 6-8pm</p>
+                    <p>June 17 - August 14</p>
+                </div>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="schedule-icon-container">
+                    <svg viewBox="0 0 24 24" class="schedule-detail-icon">
+                        <path d="M19,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,15a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V10H20Zm0-11H4V7A1,1,0,0,1,5,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h2a1,1,0,0,1,1,1Z"/>
+                    </svg>
+                </div>
+                <div class="schedule-details">
+                    <h4>Summer Camps</h4>
+                    <p>July 7-10</p>
+                    <p>August 11-14</p>
+                </div>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="schedule-icon-container">
+                    <svg viewBox="0 0 24 24" class="schedule-detail-icon">
+                        <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
+                        <path d="M15.71,7.29a1,1,0,0,0-1.42,0L12,9.59,9.71,7.29A1,1,0,1,0,8.29,8.71L10.59,11,8.29,13.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,12.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L13.41,11l2.3-2.29A1,1,0,0,0,15.71,7.29Z"/>
+                    </svg>
+                </div>
+                <div class="schedule-details">
+                    <h4>Fall Tryouts</h4>
+                    <p>August 18-19</p>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <p>For the complete schedule and latest updates, join our Spond group:</p>
+                <a href="https://spond.com/invite/XIXGR" target="_blank" class="spond-modal-link">
+                    <svg viewBox="0 0 24 24" class="spond-icon">
+                        <path d="M21.5 12a9.5 9.5 0 1 1-9.5-9.5 9.5 9.5 0 0 1 9.5 9.5zm-9.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4.5-1.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0zm-4.5 7.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
+                    </svg>
+                    Girls Volleyball Spond Group
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
+    
+    <!-- Summer Schedule Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('summerScheduleModal');
+            const btn = document.getElementById('summerScheduleBtn');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // Open modal when button is clicked
+            btn.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+            
+            // Close modal when X is clicked
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Re-enable scrolling
+            });
+            
+            // Close modal when clicking outside the modal content
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
