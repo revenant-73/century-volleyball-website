@@ -39,6 +39,21 @@
         <h1>Girls Volleyball</h1>
     </section>
     
+    <div class="container event-announcement">
+        <div class="event-details">
+            <h2 class="event-title">6-8th Grade Summer Volleyball Camp</h2>
+            <p class="event-info">Join us on <strong>July 7-11</strong> from <strong>1:00 PM to 4:00 PM</strong> each day.</p>
+            <p class="event-description">Camp fee is <strong>$80</strong>, collected at the door on the first day of camp.</p>
+        </div>
+        <button id="openFormButton" class="form-button">
+            <svg viewBox="0 0 24 24" class="form-icon">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/>
+            </svg>
+            REGISTER NOW
+        </button>
+    </div>
+    
     <div class="summer-schedule-button-container">
         <button id="summerScheduleBtn" class="summer-schedule-button">
             <svg viewBox="0 0 24 24" class="summer-icon">
@@ -494,6 +509,19 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal for Cognito Form -->
+    <div id="formModal" class="modal">
+        <div class="modal-content" style="background-color: #fff;">
+            <span class="close-modal">&times;</span>
+            <h3>6-8th Grade Summer Volleyball Camp Registration</h3>
+            <div id="cognitoFormContainer">
+                <!-- Cognito Form using iframe -->
+                <iframe src="https://www.cognitoforms.com/f/x_8dY784VEGNXbR0jzqOCA/5" allow="payment" style="border:0;width:100%;background-color:#fff;display:block;" height="748"></iframe>
+                <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
     
@@ -528,6 +556,35 @@
             document.addEventListener('keydown', function(event) {
                 if (event.key === 'Escape' && modal.style.display === 'flex') {
                     modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Registration Form Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formModal = document.getElementById('formModal');
+            const openFormButton = document.getElementById('openFormButton');
+            const closeFormButton = formModal.querySelector('.close-modal');
+            
+            // Open modal when button is clicked
+            openFormButton.addEventListener('click', function() {
+                formModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+            
+            // Close modal when X is clicked
+            closeFormButton.addEventListener('click', function() {
+                formModal.style.display = 'none';
+                document.body.style.overflow = ''; // Re-enable scrolling
+            });
+            
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target === formModal) {
+                    formModal.style.display = 'none';
                     document.body.style.overflow = '';
                 }
             });
