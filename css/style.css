@@ -91,6 +91,99 @@ img {
     display: block;
 }
 
+/* Event Announcement */
+.event-announcement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    background: rgba(0, 153, 153, 0.1);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    border: 1px solid rgba(0, 153, 153, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.event-details {
+    margin-bottom: 1.5rem;
+}
+
+.event-title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.event-info {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-description {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.event-announcement .form-button {
+    margin-top: 0.5rem;
+}
+
+.form-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 153, 153, 0.3);
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.form-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    z-index: -1;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.form-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 153, 153, 0.4);
+    color: #fff;
+}
+
+.form-button:hover::before {
+    opacity: 0.5;
+}
+
+.form-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 153, 153, 0.3);
+}
+
+.form-icon {
+    width: 1.5em;
+    height: 1.5em;
+    fill: currentColor;
+}
+
 /* Team banner image */
 .team-banner-image {
     margin-top: var(--spacing-md);
@@ -224,6 +317,93 @@ button:hover, .btn:hover {
     opacity: 1;
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff !important;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem;
+    border: 2px solid var(--primary-color);
+    animation: modalFadeIn 0.3s ease;
+    color: #333;
+}
+
+#cognitoFormContainer {
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+/* Specific styles for the form modal */
+#formModal .modal-content {
+    background-color: #fff !important;
+    color: #333 !important;
+    border: 2px solid var(--primary-color) !important;
+}
+
+#formModal .modal-content h3 {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    text-align: center;
+}
+
+#formModal .close-modal {
+    color: #666;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--primary-color);
+    text-align: center;
+}
+
+
+
 /* Responsive styles for team links */
 @media (max-width: 768px) {
     .schedule-button {
@@ -234,6 +414,27 @@ button:hover, .btn:hover {
     .spond-link {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .event-announcement {
+        padding: 1.5rem;
+    }
+    
+    .event-title {
+        font-size: 1.5rem;
+    }
+    
+    .event-info {
+        font-size: 1.1rem;
+    }
+    
+    .event-description {
+        font-size: 1rem;
     }
 }
 
@@ -247,6 +448,26 @@ button:hover, .btn:hover {
     .spond-link {
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
+        width: 100%;
+    }
+    
+    .event-announcement {
+        padding: 1.2rem;
+    }
+    
+    .event-title {
+        font-size: 1.3rem;
+    }
+    
+    .event-info {
+        font-size: 1rem;
+    }
+    
+    .event-description {
+        font-size: 0.9rem;
+    }
+    
+    .form-button {
         width: 100%;
     }
 }
@@ -658,69 +879,9 @@ main {
     fill: currentColor;
 }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: var(--spacing-md);
-}
+/* Additional Component Styles */
 
-.modal-content {
-    background-color: #111;
-    border-radius: var(--border-radius);
-    max-width: 600px;
-    width: 100%;
-    padding: var(--spacing-md);
-    position: relative;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 153, 153, 0.3);
-    animation: modalFadeIn 0.3s ease;
-    max-height: 90vh;
-    overflow-y: auto;
-}
 
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.close-modal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--accent-color);
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.close-modal:hover {
-    color: var(--primary-color);
-}
-
-.modal-content h3 {
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
-    text-align: center;
-    font-size: 1.8rem;
-    border-bottom: 1px solid rgba(0, 153, 153, 0.3);
-    padding-bottom: var(--spacing-sm);
-}
 
 .schedule-item {
     display: flex;

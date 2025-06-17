@@ -39,8 +39,36 @@
         <h1>Boys Volleyball</h1>
     </section>
 
+    <div class="container event-announcement">
+        <div class="event-details">
+            <h2 class="event-title">2v2 Boys Grass Volleyball Tournament</h2>
+            <p class="event-info">Join us on <strong>June 28</strong> at <strong>Reidville Creek Park</strong>. Games start at <strong>9:00 AM</strong>.</p>
+            <p class="event-description">This event is <strong>FREE</strong> to enter, with donations benefiting the Century High School Boys Volleyball Program.</p>
+        </div>
+        <button id="openFormButton" class="form-button">
+            <svg viewBox="0 0 24 24" class="form-icon">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/>
+            </svg>
+            REGISTER NOW
+        </button>
+    </div>
+
     <div class="container team-banner-image">
         <img src="images/century-boys-team-1.jpg" alt="Century Boys Volleyball Team" class="full-width-image">
+    </div>
+    
+    <!-- Modal for Cognito Form -->
+    <div id="formModal" class="modal">
+        <div class="modal-content" style="background-color: #fff;">
+            <span class="close-modal">&times;</span>
+            <h3>2v2 Boys Grass Volleyball Tournament Registration</h3>
+            <div id="cognitoFormContainer">
+                <!-- Cognito Form using iframe -->
+                <iframe src="https://www.cognitoforms.com/f/x_8dY784VEGNXbR0jzqOCA/6" allow="payment" style="border:0;width:100%;background-color:#fff;display:block;" height="678"></iframe>
+                <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+            </div>
+        </div>
     </div>
 
     <main>
@@ -202,5 +230,42 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
+    <!-- Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('formModal');
+            const openButton = document.getElementById('openFormButton');
+            const closeButton = document.querySelector('.close-modal');
+            
+            // Open modal
+            openButton.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // Close modal
+            closeButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+            
+            // Close modal when clicking outside content
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
