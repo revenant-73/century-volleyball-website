@@ -36,6 +36,8 @@ jspm_packages/
 # Build files
 dist/
 build/
+*.min.js
+*.min.css
 
 # Local env files
 .env
@@ -43,3 +45,7 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Project specific
+.zencoder/
+github-config*.json
