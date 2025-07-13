@@ -970,6 +970,148 @@ main {
         margin-bottom: var(--spacing-xs);
         justify-content: flex-start;
     }
+    
+    /* Schedule container mobile styles */
+    .schedule-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
+    }
+    
+    .schedule-game {
+        padding: var(--spacing-xs);
+    }
+    
+    .game-date {
+        flex: 0 0 60px;
+        padding-right: var(--spacing-xs);
+    }
+    
+    .game-date .day {
+        font-size: 1.5rem;
+    }
+    
+    .game-details {
+        padding-left: var(--spacing-xs);
+    }
+    
+    .game-details .opponent {
+        font-size: 1rem;
+    }
+    
+    .game-details .game-time {
+        font-size: 0.85rem;
+    }
+    
+    .game-details .game-type {
+        font-size: 0.75rem;
+    }
+}
+
+/* Game Schedule Container */
+.schedule-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.schedule-game {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm);
+    border-left: 3px solid var(--primary-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.schedule-game:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-date {
+    flex: 0 0 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: var(--spacing-sm);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-date .month {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.game-date .day {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.game-date .weekday {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-top: 2px;
+}
+
+.game-details {
+    flex: 1;
+    padding-left: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-details .opponent {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.game-details .game-time {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin-bottom: 2px;
+}
+
+.game-details .game-type {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.schedule-note {
+    background: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-note p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.schedule-note a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.schedule-note a:hover {
+    color: #fff;
 }
 
 /* Section divider */
