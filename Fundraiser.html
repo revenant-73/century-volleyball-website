@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Century High School Girls Volleyball Fundraiser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #1abc9c;
+            --accent-dark: #16a085;
+            --bg-dark: #1a1a1a;
+            --bg-darker: #0f0f0f;
+            --bg-card: #2a2a2a;
+            --text-light: #ffffff;
+            --text-muted: #b0b0b0;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.7);
+            --border-radius: 12px;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--gradient);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,0 1000,100"/></svg>');
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .goal-banner {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-light);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .tax-deductible-notice {
+            display: inline-block;
+            background: rgba(26, 188, 156, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(26, 188, 156, 0.3);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-light);
+            box-shadow: var(--shadow);
+        }
+
+        /* Main Content */
+        main {
+            padding: 80px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .how-it-works-item {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .how-it-works-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .how-it-works-item h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .how-it-works-item p {
+            color: var(--text-muted);
+        }
+
+        /* Donation Tiers */
+        .tiers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .tier-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .tier-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tier-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .tier-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .tier-amount {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .tier-perks {
+            list-style: none;
+        }
+
+        .tier-perks li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            padding-left: 25px;
+            color: var(--text-light);
+        }
+
+        .tier-perks li:last-child {
+            border-bottom: none;
+        }
+
+        .tier-perks li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Premium Tiers */
+        .tier-card.premium {
+            border: 2px solid var(--accent-color);
+            background: linear-gradient(135deg, var(--bg-card), rgba(26, 188, 156, 0.1));
+        }
+
+        .tier-card.premium .tier-name {
+            color: var(--accent-color);
+        }
+
+        .tier-card.premium::before {
+            background: var(--accent-color);
+            height: 6px;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: var(--gradient);
+            padding: 60px 0;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .tax-info {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-darker);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .goal-banner {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .tier-card {
+                padding: 20px;
+            }
+            
+            .tier-name {
+                font-size: 1.4rem;
+            }
+            
+            .tier-amount {
+                font-size: 1.8rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            main {
+                padding: 40px 0;
+            }
+            
+            .section {
+                margin-bottom: 40px;
+            }
+            
+            .tiers-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tier-card, .how-it-works-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .tier-card:nth-child(1) { animation-delay: 0.1s; }
+        .tier-card:nth-child(2) { animation-delay: 0.2s; }
+        .tier-card:nth-child(3) { animation-delay: 0.3s; }
+        .tier-card:nth-child(4) { animation-delay: 0.4s; }
+        .tier-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <img src="images/official-century-logo.png" alt="Century High School Logo" class="hero-logo">
+                <h1 class="hero-title">Century Jaguars Volleyball Fundraiser</h1>
+                <p class="hero-subtitle">Support our athletes and earn exclusive perks!</p>
+                <div class="goal-banner">
+                    <strong>Goal:</strong> Raise $10,000+ for equipment, uniforms, tournaments & travel
+                </div>
+                <div class="tax-deductible-notice">
+                    🏆 All donations are tax-deductible through the Century High School Foundation
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">How It Works</h2>
+                <div class="how-it-works">
+                    <div class="how-it-works-item">
+                        <h3>Two-Tier System</h3>
+                        <p>Separate donation levels for individuals and businesses, each with their own amazing perks</p>
+                    </div>
+                    <div class="how-it-works-item">
+                        <h3>Increasing Rewards</h3>
+                        <p>The more you contribute, the more exclusive perks and recognition you receive</p>
+                    </div>
+                    <div class="how-it-works-item">
+                        <h3>Limited Time</h3>
+                        <p>Fundraiser runs for 3-4 weeks with all contributions going directly to our program</p>
+                    </div>
+                    <div class="how-it-works-item">
+                        <h3>Direct Impact</h3>
+                        <p>Every dollar enhances our athletes' experience and competitive success</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Individual Donor Tiers</h2>
+                <div class="tiers-container">
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <div class="tier-name">Teal Tier</div>
+                            <div class="tier-amount">$25+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>Social media shoutout</li>
+                            <li>Thank-you card from players</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <div class="tier-name">Silver Tier</div>
+                            <div class="tier-amount">$50+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Teal Tier perks</li>
+                            <li>Century Volleyball sticker</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card premium">
+                        <div class="tier-header">
+                            <div class="tier-name">Jaguar Tier</div>
+                            <div class="tier-amount">$100+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Silver Tier perks</li>
+                            <li>Free home game entry</li>
+                            <li>Name on donor banner</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card premium">
+                        <div class="tier-header">
+                            <div class="tier-name">Champion Tier</div>
+                            <div class="tier-amount">$250+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Jaguar Tier perks</li>
+                            <li>Exclusive team shirt or hat</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card premium">
+                        <div class="tier-header">
+                            <div class="tier-name">Legacy Tier</div>
+                            <div class="tier-amount">$500+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Champion Tier perks</li>
+                            <li>Custom thank-you video</li>
+                            <li>Featured social media post</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Business Sponsor Tiers</h2>
+                <div class="tiers-container">
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <div class="tier-name">Bronze Sponsor</div>
+                            <div class="tier-amount">$150</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>Social media thank-you</li>
+                            <li>Framed team photo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <div class="tier-name">Silver Sponsor</div>
+                            <div class="tier-amount">$300</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Bronze Sponsor perks</li>
+                            <li>Logo on team website</li>
+                            <li>1 game shoutout</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card premium">
+                        <div class="tier-header">
+                            <div class="tier-name">Gold Sponsor</div>
+                            <div class="tier-amount">$600</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Silver Sponsor perks</li>
+                            <li>Logo on team banner at home games</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card premium">
+                        <div class="tier-header">
+                            <div class="tier-name">Platinum Sponsor</div>
+                            <div class="tier-amount">$1,000+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Gold Sponsor perks</li>
+                            <li>Logo on team warm-ups</li>
+                            <li>All-season media features</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card premium">
+                        <div class="tier-header">
+                            <div class="tier-name">Premier Partner</div>
+                            <div class="tier-amount">$2,500+</div>
+                        </div>
+                        <ul class="tier-perks">
+                            <li>All Platinum Sponsor perks</li>
+                            <li>Sponsor table at events</li>
+                            <li>Media features</li>
+                            <li>Custom plaque</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2 class="cta-title">Ready to Make an Impact?</h2>
+                    <p class="cta-text">Join our community of supporters and help our athletes reach their full potential</p>
+                    <p class="tax-info">💡 <strong>Tax Benefits:</strong> All donations are fully tax-deductible. You'll receive a receipt for your records.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Donate Now</a>
+                        <a href="#" class="btn btn-secondary">Share This Fundraiser</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Century Jaguars Volleyball | All Rights Reserved</p>
+            <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">
+                Tax ID: [Foundation Tax ID] | All donations processed through Century High School Foundation
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
