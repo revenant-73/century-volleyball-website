@@ -36,8 +36,9 @@ jspm_packages/
 # Build files
 dist/
 build/
-*.min.js
-*.min.css
+# Remove these lines since you want to commit minified files for a static site
+# *.min.js
+# *.min.css
 
 # Local env files
 .env
@@ -49,3 +50,23 @@ build/
 # Project specific
 .zencoder/
 github-config*.json
+
+# Static website specific
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Image optimization temp files
+*.webp.tmp
+*.jpg.tmp
+*.png.tmp
+
+# Development tools
+.sass-cache/
+.stylelintcache
