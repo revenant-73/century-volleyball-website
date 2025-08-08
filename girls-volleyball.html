@@ -18,15 +18,15 @@
                 <img src="images/official-century-logo.png" alt="Century High School Logo" class="header-logo">
             </a>
             
-            <nav>
-                <ul>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul aria-hidden="true">
                     <li><a href="girls-volleyball.html">Girls</a></li>
                     <li><a href="boys-volleyball.html">Boys</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -347,11 +347,11 @@
                     
                     <div class="coach-card">
                         <div class="coach-image">
-                            <img src="images/coach-profile-image-placeholder.png" alt="Coach Rosalie Artz">
+                            <img src="images/rosalie.png" alt="Coach Rosalie Artz">
                         </div>
                         <div class="coach-info">
                             <h4>Rosalie Artz</h4>
-                            <p class="coach-position">Assistant Coach</p>
+                            <p class="coach-position">Assistant Coach (Toddler Division)</p>
                             <button class="full-bio-btn" data-coach="rosalie">Full Bio</button>
                         </div>
                     </div>
@@ -573,9 +573,11 @@
                 },
                 rosalie: {
                     name: 'Rosalie Artz',
-                    position: 'Assistant Coach',
+                    position: 'Assistant Coach (Toddler Division)',
                     motto: '',
-                    bio: `Rosalie was born in Columbus Ohio and has been in the volleyball gym since she was a week old. She started out as a spectator being held in the stands. She now loves coming to practices and games. She will shag the volleyballs and help the team tear down the net. You can see her running around the gym and emphasizing coaching points with the team.`
+                    bio: `Born in Columbus, Ohio, and raised on gym snacks and volleyball whistles, Rosalie has been in the gym since she was a week old. What started as courtside naps has evolved into full-on assistant coaching duties: shagging volleyballs, supervising net tear-downs, and offering spirited (and mostly squeaky) sideline commentary.
+
+Don't let the tiny shoes fool you—Rosalie brings big energy, big opinions, and even bigger hugs. If you hear enthusiastic babble or see someone pointing seriously at the net, chances are it's Coach Rosalie making her presence known.`
                 }
             };
             
