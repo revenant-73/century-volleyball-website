@@ -1487,6 +1487,116 @@ main {
     margin-right: auto;
 }
 
+/* Compact Schedule Styles */
+.compact-schedule {
+    margin-top: var(--spacing-md);
+}
+
+.schedule-section-header {
+    margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.schedule-section-header h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: 80px 60px 1fr;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.schedule-row:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.schedule-row.highlight {
+    background: rgba(0, 153, 153, 0.15);
+    border-left: 3px solid var(--primary-color);
+}
+
+.schedule-row.playoffs {
+    background: rgba(192, 192, 192, 0.1);
+    border-left: 3px solid var(--accent-color);
+}
+
+.schedule-row .date {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.schedule-row .teams {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+    background: rgba(0, 153, 153, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.schedule-row .opponent {
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Home game styling - subtle teal tint for home games */
+.schedule-row.home-game {
+    background: rgba(0, 153, 153, 0.08);
+    border-left: 2px solid rgba(0, 153, 153, 0.3);
+}
+
+.schedule-row.home-game:hover {
+    background: rgba(0, 153, 153, 0.12);
+}
+
+/* Mobile optimizations for compact schedule */
+@media (max-width: 768px) {
+    .schedule-row {
+        grid-template-columns: 70px 50px 1fr;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-xs);
+        font-size: 0.9rem;
+    }
+    
+    .schedule-row .date {
+        font-size: 0.85rem;
+    }
+    
+    .schedule-row .teams {
+        font-size: 0.8rem;
+        padding: 1px 3px;
+    }
+    
+    .schedule-row .opponent {
+        font-size: 0.9rem;
+    }
+    
+    .schedule-section-header h4 {
+        font-size: 1.1rem;
+    }
+}
+
 /* Team Roster */
 .roster {
     display: grid;
