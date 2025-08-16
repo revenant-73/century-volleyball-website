@@ -50,6 +50,7 @@ build/
 # Project specific
 .zencoder/
 github-config*.json
+Century_Volleyball_2025_Schedule.txt
 
 # Static website specific
 *.tmp
