@@ -51,6 +51,15 @@ build/
 .zencoder/
 github-config*.json
 Century_Volleyball_2025_Schedule.txt
+Century_Volleyball_2025_Rosters.txt
+Century coach bios.txt
+-p
+
+# Removed coaches portal files (security reasons)
+coaches.html
+coaches-portal.html
+js/coaches-auth.js
+*.deleted
 
 # Static website specific
 *.tmp

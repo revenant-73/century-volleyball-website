@@ -43,19 +43,6 @@
             </div>
         </div>
     </section>
-    
-    <div class="tryout-announcement-card">
-        <div class="container">
-            <div class="tryout-card">
-                <h2 class="tryout-title">🏐 2025 Tryouts</h2>
-                <div class="tryout-details">
-                    <div class="tryout-dates">August 18 & 19</div>
-                    <div class="tryout-time">5:00 - 9:00 PM</div>
-                    <div class="tryout-location">Main Gym</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="container team-banner-image">
         <img src="images/century-girls-team-1.jpg" alt="Century Girls Volleyball Team" class="full-width-image">
@@ -91,15 +78,23 @@
                 <div class="roster-section-card">
                     <h3 class="section-title">2025 Team Rosters</h3>
                     
-                    <div class="roster-coming-soon">
-                        <h4>Team Rosters Coming Soon!</h4>
-                        <p>Our 2025 team roster will be available after tryouts are complete. Check back in about 2 weeks for the full roster with player details in an easy-to-navigate format.</p>
-                        <div class="roster-teams-preview">
-                            <div class="team-preview">Varsity</div>
-                            <div class="team-preview">Junior Varsity</div>
-                            <div class="team-preview">JV2</div>
-                            <div class="team-preview">JV3</div>
-                        </div>
+                    <div class="roster-teams-grid">
+                        <button class="roster-team-button" data-team="varsity">
+                            <h4>Varsity</h4>
+                            <p>13 Players</p>
+                        </button>
+                        <button class="roster-team-button" data-team="jv">
+                            <h4>Junior Varsity</h4>
+                            <p>13 Players</p>
+                        </button>
+                        <button class="roster-team-button" data-team="jv2">
+                            <h4>JV2</h4>
+                            <p>12 Players</p>
+                        </button>
+                        <button class="roster-team-button" data-team="jv3">
+                            <h4>JV3</h4>
+                            <p>11 Players</p>
+                        </button>
                     </div>
                 </div>
                 
@@ -274,7 +269,7 @@
                     
                     <div class="coach-card">
                         <div class="coach-image">
-                            <img src="images/coach-profile-image-placeholder.png" alt="Coach Amy Henderson">
+                            <img src="images/Amy H.JPEG" alt="Coach Amy Henderson">
                         </div>
                         <div class="coach-info">
                             <h4>Amy Henderson</h4>
@@ -285,7 +280,7 @@
                     
                     <div class="coach-card">
                         <div class="coach-image">
-                            <img src="images/coach-profile-image-placeholder.png" alt="Coach Cameron Artz">
+                            <img src="images/Cameron A.jpg" alt="Coach Cameron Artz">
                         </div>
                         <div class="coach-info">
                             <h4>Cameron Artz</h4>
@@ -296,7 +291,7 @@
                     
                     <div class="coach-card">
                         <div class="coach-image">
-                            <img src="images/coach-profile-image-placeholder.png" alt="Coach Katy Artz">
+                            <img src="images/Katy A.jpg" alt="Coach Katy Artz">
                         </div>
                         <div class="coach-info">
                             <h4>Katy Artz</h4>
@@ -417,6 +412,92 @@
             <span class="close-modal">&times;</span>
             <div id="coachBioContent">
                 <!-- Coach bio content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Roster Modals -->
+    <div id="varsityModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Varsity Roster</h3>
+            <div class="roster-grid">
+                <div class="player-card"><span class="player-number">14</span><span class="player-name">Ava Durtschi</span><span class="player-position">RS/OH</span></div>
+                <div class="player-card"><span class="player-number">3</span><span class="player-name">Cassie Naiome Babia</span><span class="player-position">DS/L</span></div>
+                <div class="player-card"><span class="player-number">2</span><span class="player-name">Chloe Ho</span><span class="player-position">DS/L</span></div>
+                <div class="player-card"><span class="player-number">4</span><span class="player-name">Chloe Jepsen</span><span class="player-position">M/RS</span></div>
+                <div class="player-card"><span class="player-number">10</span><span class="player-name">Ina Yamada</span><span class="player-position">DS/L</span></div>
+                <div class="player-card"><span class="player-number">6</span><span class="player-name">Isabel Curiel</span><span class="player-position">RS/M</span></div>
+                <div class="player-card"><span class="player-number">7</span><span class="player-name">Kaia Esteban</span><span class="player-position">S</span></div>
+                <div class="player-card"><span class="player-number">16</span><span class="player-name">Leyla Danielson</span><span class="player-position">M</span></div>
+                <div class="player-card"><span class="player-number">11</span><span class="player-name">Lola Mastrantonio</span><span class="player-position">OH</span></div>
+                <div class="player-card"><span class="player-number">13</span><span class="player-name">Mallak Kamel</span><span class="player-position">M</span></div>
+                <div class="player-card"><span class="player-number">9</span><span class="player-name">Rylie Benge</span><span class="player-position">OH</span></div>
+                <div class="player-card"><span class="player-number">8</span><span class="player-name">Saren Oberst</span><span class="player-position">OH</span></div>
+                <div class="player-card"><span class="player-number">1</span><span class="player-name">Tiffany Espinoza</span><span class="player-position">S</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jvModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Junior Varsity Roster</h3>
+            <div class="roster-grid">
+                <div class="player-card"><span class="player-number">15</span><span class="player-name">Abegail Polidario</span><span class="player-position">S</span></div>
+                <div class="player-card"><span class="player-number">3</span><span class="player-name">Alice Paulsen</span><span class="player-position">DS/L</span></div>
+                <div class="player-card"><span class="player-number">18</span><span class="player-name">Cara Jones</span><span class="player-position">PIN/M</span></div>
+                <div class="player-card"><span class="player-number">11</span><span class="player-name">Chloe Muehlhof</span><span class="player-position">PIN/M</span></div>
+                <div class="player-card"><span class="player-number">45</span><span class="player-name">Hannah Tanga</span><span class="player-position">S</span></div>
+                <div class="player-card"><span class="player-number">6</span><span class="player-name">Jett Cuenco</span><span class="player-position">PIN/M</span></div>
+                <div class="player-card"><span class="player-number">4</span><span class="player-name">Kayla Tran</span><span class="player-position">DS/L</span></div>
+                <div class="player-card"><span class="player-number">10</span><span class="player-name">Kora Meyer</span><span class="player-position">DS/L</span></div>
+                <div class="player-card"><span class="player-number">20</span><span class="player-name">Lily Ross</span><span class="player-position">PIN/M</span></div>
+                <div class="player-card"><span class="player-number">14</span><span class="player-name">Luna Lavelle</span><span class="player-position">PIN</span></div>
+                <div class="player-card"><span class="player-number">44</span><span class="player-name">Maliah Lopez</span><span class="player-position">PIN/M</span></div>
+                <div class="player-card"><span class="player-number">30</span><span class="player-name">Pooja Desai</span><span class="player-position">M</span></div>
+                <div class="player-card"><span class="player-number">16</span><span class="player-name">Xochitl Mota</span><span class="player-position">DS/OH</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jv2Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>JV2 Roster</h3>
+            <div class="roster-grid">
+                <div class="player-card"><span class="player-number">5</span><span class="player-name">Amber Nicolas</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">7</span><span class="player-name">Caroline Calderon</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">46</span><span class="player-name">Chioma Amukamara</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">9</span><span class="player-name">Helen Truong</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">22</span><span class="player-name">Joy Kamonjo</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">42</span><span class="player-name">Kenza Johnson</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">2</span><span class="player-name">Leyla Mohamed</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">8</span><span class="player-name">Natalee Her</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">38</span><span class="player-name">Raine Perez</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">1</span><span class="player-name">Renee Fegurgur</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">31</span><span class="player-name">Riley Meyers</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">21</span><span class="player-name">Telinah Daniels</span><span class="player-position"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jv3Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>JV3 Roster</h3>
+            <div class="roster-grid">
+                <div class="player-card"><span class="player-number">29</span><span class="player-name">Emily Soderberg</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">39</span><span class="player-name">Everley Hamilton</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">23</span><span class="player-name">Kennedi Roessler</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">17</span><span class="player-name">Kiki Espinoza</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">24</span><span class="player-name">Maddie Petrov</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">26</span><span class="player-name">Petra Tanner</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">19</span><span class="player-name">Phoenix Stanford</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">25</span><span class="player-name">Renata Sanchez</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">13</span><span class="player-name">Samantha Webster</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">12</span><span class="player-name">Sienna Taylor</span><span class="player-position"></span></div>
+                <div class="player-card"><span class="player-number">35</span><span class="player-name">West Baker</span><span class="player-position"></span></div>
             </div>
         </div>
     </div>
@@ -582,6 +663,62 @@ Don't let the tiny shoes fool you—Rosalie brings big energy, big opinions, and
                 if (event.key === 'Escape' && coachBioModal.style.display === 'flex') {
                     coachBioModal.style.display = 'none';
                     document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+    <!-- Roster Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rosterButtons = document.querySelectorAll('.roster-team-button');
+            const modals = {
+                varsity: document.getElementById('varsityModal'),
+                jv: document.getElementById('jvModal'),
+                jv2: document.getElementById('jv2Modal'),
+                jv3: document.getElementById('jv3Modal')
+            };
+            
+            // Open modal when team button is clicked
+            rosterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const team = this.getAttribute('data-team');
+                    const modal = modals[team];
+                    if (modal) {
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // Close modal functionality for each modal
+            Object.values(modals).forEach(modal => {
+                const closeBtn = modal.querySelector('.close-modal');
+                
+                // Close when X is clicked
+                closeBtn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
+                
+                // Close when clicking outside modal
+                modal.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    Object.values(modals).forEach(modal => {
+                        if (modal.style.display === 'flex') {
+                            modal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }
+                    });
                 }
             });
         });
