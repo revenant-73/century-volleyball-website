@@ -268,9 +268,13 @@ img {
 
 .full-width-image {
     width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Prevents layout shift while loading */
+    object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1a1a1a; /* Placeholder color while loading */
 }
 
 .full-width-image:hover {
