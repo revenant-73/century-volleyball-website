@@ -393,6 +393,159 @@ button:hover, .btn:hover {
     opacity: 1;
 }
 
+/* Apparel CTA Styles */
+.apparel-cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007777 100%);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    box-shadow: 0 8px 32px rgba(0, 153, 153, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.apparel-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    pointer-events: none;
+}
+
+.apparel-cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.apparel-cta-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.apparel-cta-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apparel-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    color: var(--primary-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+}
+
+.apparel-cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 153, 153, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.apparel-cta-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    color: var(--primary-color);
+}
+
+.apparel-cta-button:hover::before {
+    left: 100%;
+}
+
+.apparel-cta-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.apparel-icon {
+    width: 1.5em;
+    height: 1.5em;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.button-main {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.button-sub {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+.arrow-icon {
+    width: 1.2em;
+    height: 1.2em;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.apparel-cta-button:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Responsive adjustments for apparel CTA */
+@media (max-width: 768px) {
+    .apparel-cta-section {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-sm) 0;
+    }
+    
+    .apparel-cta-title {
+        font-size: 1.5rem;
+    }
+    
+    .apparel-cta-text {
+        font-size: 1rem;
+    }
+    
+    .apparel-cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .button-text {
+        align-items: center;
+    }
+}
+
 /* Modal Styles */
 .modal {
     display: none;
