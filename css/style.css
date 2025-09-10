@@ -1717,6 +1717,28 @@ main {
     font-weight: 400;
 }
 
+/* Varsity Results in Schedule */
+.varsity-result {
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.varsity-result.win {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.varsity-result.loss {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
 /* Home game styling - subtle teal tint for home games */
 .schedule-row.home-game {
     background: rgba(0, 153, 153, 0.08);
@@ -1747,6 +1769,12 @@ main {
     
     .schedule-row .opponent {
         font-size: 0.9rem;
+    }
+    
+    .varsity-result {
+        font-size: 0.75rem;
+        padding: 1px 4px;
+        margin-left: 4px;
     }
     
     .schedule-section-header h4 {
