@@ -711,9 +711,78 @@ button:hover, .btn:hover {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem 0;
-    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.8rem 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Modern Card Styling */
+.roster-section-card, 
+.schedule-section-card, 
+.coaches-section-card,
+.team-mission-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.roster-section-card:hover, 
+.schedule-section-card:hover, 
+.coaches-section-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 153, 153, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Varsity Result Badges */
+.varsity-result {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.varsity-result.win {
+    background: rgba(76, 175, 80, 0.15);
+    color: #81c784;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.varsity-result.loss {
+    background: rgba(244, 67, 54, 0.15);
+    color: #e57373;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Quick Access Cards - Home Page */
+.quick-access-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quick-access-card:hover {
+    background: rgba(0, 153, 153, 0.08);
+    border-color: var(--primary-color);
+    transform: scale(1.02);
 }
 
 /* Hero Section */
