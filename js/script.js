@@ -311,6 +311,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
 
+    // Scroll effect for header
+    const header = document.querySelector('.site-header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Initial check
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        }
+    }
+
     // Set initial viewport height
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
