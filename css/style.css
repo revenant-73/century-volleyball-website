@@ -859,10 +859,20 @@ button:hover, .btn:hover {
 }
 
 /* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(0, 128, 128, 0.1) 100%);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 80px; /* Offset for fixed header */
+}
+
+/* Hero Image Background (Applied to .hero class) */
 .hero {
-    position: relative;
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
     height: 90vh;
-    background: url('../images/hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1066,6 +1076,35 @@ nav a:hover::after {
     top: 8px;
     width: 0%;
     left: 50%;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--glass-bg);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav a {
+        font-size: 1.1rem;
+        padding: var(--spacing-sm) 0;
+    }
 }
 
 .hero-buttons {
