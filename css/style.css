@@ -869,7 +869,7 @@ button:hover, .btn:hover {
 
 /* Hero Image Background (Applied to .hero class) */
 .hero {
-    background-image: url('../images/hero.jpg');
+    background-image: url('../images/optimized/website-hero.webp');
     background-size: cover;
     background-position: center;
     height: 90vh;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://centuryvolleyball.com/sitemap.xml
