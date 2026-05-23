@@ -25,8 +25,6 @@ Use the included PowerShell script for easy deployment:
 ## Structure
 - `index.html` - Main landing page
 - `boys-volleyball.html` / `girls-volleyball.html` - Team-specific pages
-- `coaches.html` - Login page for secure area
-- `coaches-portal.html` - Protected resources for coaches
 - `css/` - Stylesheets
 - `js/` - JavaScript functionality
 - `images/` - Team photos and assets

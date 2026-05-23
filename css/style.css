@@ -880,6 +880,7 @@ button:hover, .btn:hover {
     overflow: hidden;
     margin-top: 0;
     flex-direction: column;
+    position: relative;
 }
 
 .hero::after {
@@ -920,7 +921,7 @@ button:hover, .btn:hover {
 
 /* Header styling removed */
 
-.hero h1, .hero-buttons, .simple-header h1, .hero-logo {
+.hero h1, .hero-buttons, .simple-header h1, .hero-logo, .hero-tagline {
     position: relative;
     z-index: 2;
 }
@@ -1737,6 +1738,14 @@ main {
 .value-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+}
+
+.value-icon svg,
+.announcement-icon svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    stroke: var(--primary-color);
+    stroke-width: 1.5;
 }
 
 .value-card h3 {

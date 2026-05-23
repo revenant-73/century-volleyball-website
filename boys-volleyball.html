@@ -13,28 +13,7 @@
     <link rel="preload" as="image" href="images/century-boys-team-1.jpg">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <a href="index.html">
-                <img src="images/official-century-logo.png" alt="Century High School Logo" class="header-logo">
-            </a>
-            
-            <nav role="navigation" aria-label="Main navigation">
-                <ul>
-                    <li><a href="girls-volleyball.html">Girls</a></li>
-                    <li><a href="boys-volleyball.html">Boys</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+    <header id="main-header" class="site-header"></header>
 
     <section class="simple-header">
         <h1>Boys Volleyball</h1>
@@ -67,117 +46,24 @@
                     </a>
                 </div>
                 
-<div class="roster-section-card">
-                     <h3 class="section-title">2026 Team Roster</h3>
-                     <div class="roster-grid" style="margin-top: 2rem;">
-                         <div class="player-card"><span class="player-name">Adam Duong</span><span class="player-position">SR S/OP</span></div>
-                         <div class="player-card"><span class="player-name">Alexander English</span><span class="player-position">FR MB</span></div>
-                         <div class="player-card"><span class="player-name">Finn English</span><span class="player-position">SR MB</span></div>
-                         <div class="player-card"><span class="player-name">Nathaniel Gaoiran</span><span class="player-position">SR S</span></div>
-                         <div class="player-card"><span class="player-name">Jonah Baliza</span><span class="player-position">JR MB</span></div>
-                         <div class="player-card"><span class="player-name">Tyler Bake</span><span class="player-position">SR MB</span></div>
-                         <div class="player-card"><span class="player-name">Yurijah Hawj</span><span class="player-position">FR OH</span></div>
-                         <div class="player-card"><span class="player-name">Coby Mooney</span><span class="player-position">SO OH/OP</span></div>
-                         <div class="player-card"><span class="player-name">Asher Moore</span><span class="player-position">SO OP</span></div>
-                         <div class="player-card"><span class="player-name">Joshua Moreno</span><span class="player-position">JR OH/S</span></div>
-                         <div class="player-card"><span class="player-name">Dade Vandomelen</span><span class="player-position">JR OH/S</span></div>
-                         <div class="player-card"><span class="player-name">Jace Tagumasi</span><span class="player-position">FR DS/L</span></div>
-                         <div class="player-card"><span class="player-name">Johnson Phan</span><span class="player-position">JR L/S</span></div>
-                         <div class="player-card"><span class="player-name">Chase Paulson</span><span class="player-position">FR DS/L</span></div>
-                         <div class="player-card"><span class="player-name">Anthony Nguyen</span><span class="player-position">SR OP/S</span></div>
-                         <div class="player-card"><span class="player-name">Alexander Tugano</span><span class="player-position">SO OH/L</span></div>
-                         <div class="player-card"><span class="player-name">Astin Thongtanunam</span><span class="player-position">JR RS/OH</span></div>
-                         <div class="player-card"><span class="player-name">Caleb Moua</span><span class="player-position">SR OH</span></div>
-                     </div>
-                 </div>
+                <div class="roster-section-card">
+                    <h3 class="section-title">Team Roster</h3>
+                    <div class="roster-teams-grid">
+                        <button class="roster-team-button" data-team="varsity">
+                            <h4>Varsity</h4>
+                        </button>
+                    </div>
+                </div>
                 
                 <div class="schedule-section-card">
-<div class="record-summary" style="display: flex; gap: 2rem; margin-bottom: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; justify-content: center;">
-                         <div class="stat"><span style="color: var(--primary-color); font-weight: 800; font-size: 1.2rem;">9-5</span><br><small>OVERALL</small></div>
-                         <div class="stat"><span style="color: var(--primary-color); font-weight: 800; font-size: 1.2rem;">9-3</span><br><small>LEAGUE</small></div>
-                         <div class="stat"><span style="color: var(--primary-color); font-weight: 800; font-size: 1.2rem;">#10</span><br><small>RANK</small></div>
-                     </div>
+                    <div id="record-summary" class="record-summary" style="display: flex; gap: 2rem; margin-bottom: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; justify-content: center;">
+                        <!-- Data populated by data-loader.js -->
+                    </div>
 
-<h3 class="section-title">2026 Season Schedule</h3>
-                     <div class="compact-schedule">
-                         <div class="schedule-list">
-                             <div class="schedule-row">
-                                 <span class="date">Thu 3/19</span>
-                                 <span class="time">W 2-0</span>
-                                 <span class="opponent">vs TBD (Jamboree)</span>
-                             </div>
-                             <div class="schedule-row home-game">
-                                 <span class="date">Mon 4/6</span>
-                                 <span class="time">W 2-0</span>
-                                 <span class="opponent">vs Glencoe</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Mon 4/6</span>
-                                 <span class="time">W 3-1</span>
-                                 <span class="opponent">@ Forest Grove</span>
-                             </div>
-                             <div class="schedule-row home-game">
-                                 <span class="date">Thu 4/9</span>
-                                 <span class="time">L 1-2</span>
-                                 <span class="opponent">vs Liberty</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Sat 4/11</span>
-                                 <span class="time">L 1-3</span>
-                                 <span class="opponent">vs Sherwood</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Mon 4/13</span>
-                                 <span class="time">W 2-0</span>
-                                 <span class="opponent">@ Sherwood</span>
-                             </div>
-                             <div class="schedule-row home-game">
-                                 <span class="date">Thu 4/16</span>
-                                 <span class="time">W 2-0</span>
-                                 <span class="opponent">vs Wilsonville</span>
-                             </div>
-                             <div class="schedule-row home-game">
-                                 <span class="date">Thu 4/16</span>
-                                 <span class="time">W 2-1</span>
-                                 <span class="opponent">vs Hillsboro</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Wed 4/22</span>
-                                 <span class="time">L 1-2</span>
-                                 <span class="opponent">@ Glencoe</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Wed 4/22</span>
-                                 <span class="time">L 0-3</span>
-                                 <span class="opponent">vs Forest Grove</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Wed 4/29</span>
-                                 <span class="time">W 3-2</span>
-                                 <span class="opponent">@ Liberty</span>
-                             </div>
-                             <div class="schedule-row home-game">
-                                 <span class="date">Wed 5/6</span>
-                                 <span class="time">W 2-0</span>
-                                 <span class="opponent">vs Sherwood</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Wed 5/13</span>
-                                 <span class="time">W 2-0</span>
-                                 <span class="opponent">vs Hillsboro</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Wed 5/13</span>
-                                 <span class="time">L 0-3</span>
-                                 <span class="opponent">@ Wilsonville</span>
-                             </div>
-                             <div class="schedule-row">
-                                 <span class="date">Wed 5/20</span>
-                                 <span class="time">L 0-3</span>
-                                 <span class="opponent">@ La Salle Prep</span>
-                             </div>
-                         </div>
-                     </div>
+                    <h3 class="section-title">Season Schedule</h3>
+                    <div id="team-schedule" class="compact-schedule">
+                        <!-- Data populated by data-loader.js -->
+                    </div>
                     
                     <div class="schedule-note">
                         <p><strong>Note:</strong> All times are subject to change. For the most up-to-date information, please check <a href="https://www.osaa.org/teams/67008" target="_blank">our OSAA page</a>.</p>
@@ -188,105 +74,17 @@
                     <h3 class="section-title">Meet Our Coaches</h3>
                     <p class="coaches-description">Dedicated to developing athletes of character, skill, and heart.</p>
                     
-                    <div class="coaches-grid">
-                        <!-- Head Coach -->
-                        <div class="coach-card highlight-card">
-                            <div class="coach-image">
-                                <img src="images/official-century-logo.png" alt="Coach McKinsey Barnett" loading="lazy">
-                            </div>
-                            <div class="coach-details">
-                                <h4>Kinsey<br>Barnett</h4>
-                                <p class="coach-position">Head Coach</p>
-                                <button class="full-bio-btn" data-coach="mckinsey">View Full Bio</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Assistant Coach -->
-                        <div class="coach-card">
-                            <div class="coach-image">
-                                <img src="images/official-century-logo.png" alt="Coach Ash Bailey" loading="lazy">
-                            </div>
-                            <div class="coach-details">
-                                <h4>Ashlynn<br>Bailey</h4>
-                                <p class="coach-position">Assistant Coach</p>
-                                <button class="full-bio-btn" data-coach="ash">View Full Bio</button>
-                            </div>
-                        </div>
+                    <div id="coaches-grid" class="coaches-grid">
+                        <!-- Data populated by data-loader.js -->
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Brand Column -->
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo-link">
-                        <img src="images/official-century-logo.png" alt="Century High School Logo" class="footer-logo" width="60" height="60">
-                        <span class="footer-site-title">Century <span class="accent">Volleyball</span></span>
-                    </a>
-                    <p class="footer-tagline">Play Brave, Play Free, Play the Century Way</p>
-                    <div class="school-info">
-                        <p>Century High School</p>
-                        <p>Hillsboro, Oregon</p>
-                    </div>
-                </div>
+    <footer id="main-footer"></footer>
 
-                <!-- Navigation Column -->
-                <div class="footer-nav">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="girls-volleyball.html">Girls Volleyball</a></li>
-                        <li><a href="boys-volleyball.html">Boys Volleyball</a></li>
-                        <li><a href="contact.html">Contact & Registration</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources Column -->
-                <div class="footer-resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://century.8to18.com/accounts/login" target="_blank">Registration Portal</a></li>
-                        <li><a href="https://spond.com/invite/XIXGR" target="_blank">Girls Spond Group</a></li>
-                        <li><a href="https://century.hsd.k12.or.us/" target="_blank">Century HS Website</a></li>
-                    </ul>
-                </div>
-
-                <!-- Social Column -->
-                <div class="footer-social-col">
-                    <h4>Connect</h4>
-                    <div class="social-links-grid">
-                        <div class="social-item">
-                            <span class="social-label">Girls</span>
-                            <a href="https://www.instagram.com/centuryvolleyball/" target="_blank" aria-label="Follow Girls Volleyball on Instagram">
-                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            </a>
-                        </div>
-                        <div class="social-item">
-                            <span class="social-label">Boys</span>
-                            <a href="https://www.instagram.com/centuryboysvolleyball/" target="_blank" aria-label="Follow Boys Volleyball on Instagram">
-                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2026 Century Volleyball. All rights reserved.
-                </div>
-                <div class="footer-legal">
-                    <a href="privacy.html">Terms</a>
-                    <a href="privacy.html">Privacy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Coach Bio Modal -->
+    <!-- Modals -->
     <div id="coachBioModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -296,77 +94,18 @@
         </div>
     </div>
 
+    <div id="roster-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="roster-modal-title">Team Roster</h3>
+            <div id="roster-modal-grid" class="roster-grid">
+                <!-- Data populated by data-loader.js -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/components.js"></script>
+    <script src="js/data-loader.js"></script>
     <script src="js/script.js"></script>
-    
-    <!-- Coach Bio Modal Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const coachBioModal = document.getElementById('coachBioModal');
-            const coachBioContent = document.getElementById('coachBioContent');
-            const fullBioBtns = document.querySelectorAll('.full-bio-btn');
-            const closeCoachBioBtn = coachBioModal.querySelector('.close-modal');
-            
-            // Coach bio data
-            const coachBios = {
-                mckinsey: {
-                    name: 'Kinsey Barnett',
-                    position: 'Head Coach',
-                    motto: '"Compete with purpose. Build each other up."',
-                    bio: `Bio coming soon!`
-                },
-                ash: {
-                    name: 'Ashlynn Bailey',
-                    position: 'Assistant Coach',
-                    motto: '"Unity through effort."',
-                    bio: `Bio coming soon!`
-                }
-            };
-            
-            // Open modal and insert content
-            fullBioBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const coachId = this.getAttribute('data-coach');
-                    const coach = coachBios[coachId];
-                    
-                    if (coach) {
-                        coachBioContent.innerHTML = `
-                            <div class="coach-modal-header">
-                                <h3>${coach.name}</h3>
-                                <p class="coach-position-modal">${coach.position}</p>
-                            </div>
-                            <p class="coach-motto-modal">${coach.motto}</p>
-                            <div class="coach-bio-text">
-                                ${coach.bio.split('\n\n').map(p => `<p>${p}</p>`).join('')}
-                            </div>
-                        `;
-                        coachBioModal.style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-            });
-            
-            // Close modal
-            closeCoachBioBtn.addEventListener('click', function() {
-                coachBioModal.style.display = 'none';
-                document.body.style.overflow = '';
-            });
-            
-            window.addEventListener('click', function(event) {
-                if (event.target === coachBioModal) {
-                    coachBioModal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-            
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    if (coachBioModal.style.display === 'flex') {
-                        coachBioModal.style.display = 'none';
-                        document.body.style.overflow = '';
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>

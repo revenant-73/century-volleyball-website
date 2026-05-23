@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Get all HTML files in the directory
-const htmlFiles = fs.readdirSync('.').filter(file => file.endsWith('.html') && 
-    file !== 'coaches.html' && file !== 'coaches-portal.html');
+const htmlFiles = fs.readdirSync('.').filter(file => file.endsWith('.html'));
 
 // Update each file
 htmlFiles.forEach(file => {
@@ -11,7 +10,7 @@ htmlFiles.forEach(file => {
     
     // Replace the footer links section
     const oldFooterLinks = /<div class="footer-links">\s*<a href="privacy\.html">Privacy Policy<\/a>\s*<a href="contact\.html">Contact Us<\/a>\s*<\/div>/;
-    const newFooterLinks = '<div class="footer-links">\n                    <a href="privacy.html">Privacy Policy</a>\n                    <a href="contact.html">Contact Us</a>\n                    <a href="coaches.html">Coaches Portal</a>\n                </div>';
+    const newFooterLinks = '<div class="footer-links">\n                    <a href="privacy.html">Privacy Policy</a>\n                    <a href="contact.html">Contact Us</a>\n                </div>';
     
     content = content.replace(oldFooterLinks, newFooterLinks);
     

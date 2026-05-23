@@ -13,28 +13,7 @@
     <link rel="preload" as="image" href="images/century-girls-team-1.jpg">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <a href="index.html">
-                <img src="images/official-century-logo.png" alt="Century High School Logo" class="header-logo">
-            </a>
-            
-            <nav role="navigation" aria-label="Main navigation">
-                <ul>
-                    <li><a href="girls-volleyball.html">Girls</a></li>
-                    <li><a href="boys-volleyball.html">Boys</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+    <header id="main-header" class="site-header"></header>
 
     <section class="simple-header">
         <h1>Girls Volleyball</h1>
@@ -53,7 +32,9 @@
     <section class="spond-announcement">
         <div class="container">
             <div class="announcement-content">
-                <div class="announcement-icon">📱</div>
+                <div class="announcement-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                </div>
                 <h3>Stay Connected</h3>
                 <p>Join our <strong>Spond</strong> group for real-time updates on open gyms, camps, tryouts, and team news.</p>
                 <div class="announcement-buttons">
@@ -99,178 +80,38 @@
                 </div>
                 
                 <div class="roster-section-card">
-                    <h3 class="section-title">2025 Team Rosters</h3>
+                    <h3 class="section-title">Team Rosters</h3>
                     
                     <div class="roster-teams-grid">
                         <button class="roster-team-button" data-team="varsity">
                             <h4>Varsity</h4>
-                            <p>13 Players</p>
                         </button>
                         <button class="roster-team-button" data-team="jv">
                             <h4>Junior Varsity</h4>
-                            <p>13 Players</p>
                         </button>
                         <button class="roster-team-button" data-team="jv2">
                             <h4>JV2</h4>
-                            <p>12 Players</p>
                         </button>
                         <button class="roster-team-button" data-team="jv3">
                             <h4>JV3</h4>
-                            <p>11 Players</p>
                         </button>
                     </div>
                 </div>
                 
                 <div class="schedule-section-card">
-                    <h3 class="section-title">2025 Volleyball Schedule</h3>
+                    <div id="record-summary" class="record-summary" style="display: flex; gap: 2rem; margin-bottom: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; justify-content: center;">
+                        <!-- Data populated by data-loader.js -->
+                    </div>
+
+                    <h3 class="section-title">Volleyball Schedule</h3>
                     <p class="schedule-description">Follow our journey through the season. Every match is a chance to grow stronger together.</p>
                     
-                    <div class="compact-schedule">
-                        <div class="schedule-section-header">
-                            <h4>🏐 PRESEASON (AUG 22 - SEP 2)</h4>
-                        </div>
-                        <div class="schedule-list">
-                            <div class="schedule-row">
-                                <span class="date">Thu 8/28</span>
-                                <span class="teams">VAR</span>
-                                <span class="opponent">PAC Jamboree @ Forest Grove</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Thu 8/28</span>
-                                <span class="teams">JV</span>
-                                <span class="opponent">PAC Jamboree @ Sherwood</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Thu 8/28</span>
-                                <span class="teams">JV2/JV3</span>
-                                <span class="opponent">PAC Jamboree @ Glencoe</span>
-                            </div>
-                        </div>
-                        
-                        <div class="schedule-section-header">
-                            <h4>🏆 REGULAR SEASON (SEP 3 - OCT 23)</h4>
-                        </div>
-                        <div class="schedule-list">
-                            <div class="schedule-row">
-                                <span class="date">Tue 9/2</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ Southridge <span class="varsity-result win">V: W 3-1</span></span>
-                            </div>
-                            <div class="schedule-row home-game">
-                                <span class="date">Thu 9/4</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">Ida B. Wells <span class="varsity-result loss">V: L 1-3</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 9/6</span>
-                                <span class="teams">JV2/JV3</span>
-                                <span class="opponent">@ Century Tournament</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Thu 9/11</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ Liberty <span class="varsity-result win">V: W 3-0</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 9/13</span>
-                                <span class="teams">V</span>
-                                <span class="opponent">@ Milwaukie Tournament</span>
-                            </div>
-                            <div class="schedule-row home-game">
-                                <span class="date">Mon 9/15</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">Sherwood <span class="varsity-result loss">V: L 1-3</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Wed 9/17</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ Glencoe <span class="varsity-result loss">V: L 1-3</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 9/20</span>
-                                <span class="teams">V</span>
-                                <span class="opponent">@ Westview Tournament</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 9/20</span>
-                                <span class="teams">JV</span>
-                                <span class="opponent">@ Southridge Tournament</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Mon 9/22</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ Forest Grove <span class="varsity-result loss">V: L 0-3</span></span>
-                            </div>
-                            <div class="schedule-row home-game">
-                                <span class="date">Wed 9/24</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">Newberg <span class="varsity-result win">V: W 3-0</span></span>
-                            </div>
-                            <div class="schedule-row home-game">
-                                <span class="date">Tue 9/30</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">McMinnville <span class="varsity-result win">V: W 3-2</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 10/4</span>
-                                <span class="teams">V</span>
-                                <span class="opponent">@ Lakeridge Tournament</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 10/4</span>
-                                <span class="teams">JV</span>
-                                <span class="opponent">@ Westview Tournament</span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 10/4</span>
-                                <span class="teams">JV2/JV3</span>
-                                <span class="opponent">@ Hilhi Tournament</span>
-                            </div>
-                            <div class="schedule-row home-game">
-                                <span class="date">Mon 10/6</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">Liberty <span class="varsity-result win">V: W 3-1</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Wed 10/8</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ Sherwood <span class="varsity-result loss">V: L 0-3</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Sat 10/11</span>
-                                <span class="teams">V</span>
-                                <span class="opponent">@ Seaside Tournament</span>
-                            </div>
-                            <div class="schedule-row home-game">
-                                <span class="date">Tue 10/14</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">Glencoe <span class="varsity-result loss">V: L 2-3</span></span>
-                            </div>
-                            <div class="schedule-row home-game highlight">
-                                <span class="date">Thu 10/16</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">Forest Grove (Senior Night) <span class="varsity-result loss">V: L 1-3</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Mon 10/20</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ Newberg <span class="varsity-result win">V: W 3-2</span></span>
-                            </div>
-                            <div class="schedule-row">
-                                <span class="date">Wed 10/22</span>
-                                <span class="teams">ALL</span>
-                                <span class="opponent">@ McMinnville <span class="varsity-result win">V: W 3-1</span></span>
-                            </div>
-                            <div class="schedule-row playoffs">
-                                <span class="date">Wed 10/29</span>
-                                <span class="teams">V</span>
-                                <span class="opponent">@ South Salem <span class="varsity-result loss">V: L 0-3</span></span>
-                            </div>
-                        </div>
+                    <div id="team-schedule" class="compact-schedule">
+                        <!-- Data populated by data-loader.js -->
                     </div>
                     
                     <div class="schedule-note">
-                        <p><strong>Note:</strong> This schedule is for the 2025 season. All times are subject to change. For the most up-to-date information, please check <a href="https://www.osaa.org/teams/61943" target="_blank">our OSAA page</a> or join our <a href="https://spond.com/invite/XIXGR" target="_blank">Spond group</a>.</p>
+                        <p><strong>Note:</strong> All times are subject to change. For the most up-to-date information, please check <a href="https://www.osaa.org/teams/61943" target="_blank">our OSAA page</a> or join our <a href="https://spond.com/invite/XIXGR" target="_blank">Spond group</a>.</p>
                     </div>
                 </div>
                 
@@ -278,211 +119,17 @@
                     <h3 class="section-title">Meet Our Coaches</h3>
                     <p class="coaches-description">The leaders who guide our journey, both on and off the court.</p>
                     
-                    <div class="coaches-grid">
-                        <div class="coaches-row">
-                            <div class="coach-card">
-                                <div class="coach-image">
-                                    <img src="images/loren-rise.jpg" alt="Coach Loren Anderson" loading="lazy" width="300" height="300">
-                                </div>
-                                <div class="coach-info">
-                                    <h4>Loren<br>Anderson</h4>
-                                    <p class="coach-position">Varsity Coach</p>
-                                    <button class="full-bio-btn" data-coach="loren">Full Bio</button>
-                                </div>
-                            </div>
-                            
-                            <div class="coach-card">
-                                <div class="coach-image">
-                                    <img src="images/Amy H.JPEG" alt="Coach Amy Henderson" loading="lazy" width="300" height="300">
-                                </div>
-                                <div class="coach-info">
-                                    <h4>Amy<br>Henderson</h4>
-                                    <p class="coach-position">Varsity Assistant Coach</p>
-                                    <button class="full-bio-btn" data-coach="amy">Full Bio</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="coaches-row">
-                            <div class="coach-card">
-                                <div class="coach-image">
-                                    <img src="images/Neil_Davidson.jpg" alt="Coach Neil Davidson" loading="lazy" width="300" height="300">
-                                </div>
-                                <div class="coach-info">
-                                    <h4>Neil<br>Davidson</h4>
-                                    <p class="coach-position">JV Coach</p>
-                                    <button class="full-bio-btn" disabled>Bio Coming Soon</button>
-                                </div>
-                            </div>
-                            
-                            <div class="coach-card">
-                                <div class="coach-image">
-                                    <img src="images/Felicity W.jpeg" alt="Coach Felicity Wilkinson" loading="lazy" width="300" height="300">
-                                </div>
-                                <div class="coach-info">
-                                    <h4>Felicity<br>Wilkinson</h4>
-                                    <p class="coach-position">JV2 Coach</p>
-                                    <button class="full-bio-btn" data-coach="felicity">Full Bio</button>
-                                </div>
-                            </div>
-                            
-                            <div class="coach-card">
-                                <div class="coach-image">
-                                    <img src="images/Carson B.jpg" alt="Coach Carson Beguelin" loading="lazy" width="300" height="300">
-                                </div>
-                                <div class="coach-info">
-                                    <h4>Carson<br>Beguelin</h4>
-                                    <p class="coach-position">JV3 Coach</p>
-                                    <button class="full-bio-btn" disabled>Bio Coming Soon</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="coaches-grid" class="coaches-grid">
+                        <!-- Data populated by data-loader.js -->
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Brand Column -->
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo-link">
-                        <img src="images/official-century-logo.png" alt="Century High School Logo" class="footer-logo" width="60" height="60">
-                        <span class="footer-site-title">Century <span class="accent">Volleyball</span></span>
-                    </a>
-                    <p class="footer-tagline">Play Brave, Play Free, Play the Century Way</p>
-                    <div class="school-info">
-                        <p>Century High School</p>
-                        <p>Hillsboro, Oregon</p>
-                    </div>
-                </div>
+    <footer id="main-footer"></footer>
 
-                <!-- Navigation Column -->
-                <div class="footer-nav">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="girls-volleyball.html">Girls Volleyball</a></li>
-                        <li><a href="boys-volleyball.html">Boys Volleyball</a></li>
-                        <li><a href="contact.html">Contact & Registration</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources Column -->
-                <div class="footer-resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://century.8to18.com/accounts/login" target="_blank">Registration Portal</a></li>
-                        <li><a href="https://spond.com/invite/XIXGR" target="_blank">Girls Spond Group</a></li>
-                        <li><a href="https://century.hsd.k12.or.us/" target="_blank">Century HS Website</a></li>
-                    </ul>
-                </div>
-
-                <!-- Social Column -->
-                <div class="footer-social-col">
-                    <h4>Connect</h4>
-                    <div class="social-links-grid">
-                        <div class="social-item">
-                            <span class="social-label">Girls</span>
-                            <a href="https://www.instagram.com/centuryvolleyball/" target="_blank" aria-label="Follow Girls Volleyball on Instagram">
-                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            </a>
-                        </div>
-                        <div class="social-item">
-                            <span class="social-label">Boys</span>
-                            <a href="https://www.instagram.com/centuryboysvolleyball/" target="_blank" aria-label="Follow Boys Volleyball on Instagram">
-                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2026 Century Volleyball. All rights reserved.
-                </div>
-                <div class="footer-legal">
-                    <a href="privacy.html">Terms</a>
-                    <a href="privacy.html">Privacy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Summer Schedule Modal -->
-    <div id="summerScheduleModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>Summer 2025 Schedule</h3>
-            
-            <div class="schedule-item">
-                <div class="schedule-icon-container">
-                    <svg viewBox="0 0 24 24" class="schedule-detail-icon">
-                        <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
-                        <path d="M12,6a1,1,0,0,0-1,1v5a1,1,0,0,0,.293.707l3,3a1,1,0,0,0,1.414-1.414L13,11.586V7A1,1,0,0,0,12,6Z"/>
-                    </svg>
-                </div>
-                <div class="schedule-details">
-                    <h4>Open Gyms</h4>
-                    <p>Tuesday-Thursday, 6-8pm</p>
-                    <p>June 17 - August 14</p>
-                </div>
-            </div>
-            
-            <div class="schedule-item">
-                <div class="schedule-icon-container">
-                    <svg viewBox="0 0 24 24" class="schedule-detail-icon">
-                        <path d="M19,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,15a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V10H20Zm0-11H4V7A1,1,0,0,1,5,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h2a1,1,0,0,1,1,1Z"/>
-                    </svg>
-                </div>
-                <div class="schedule-details">
-                    <h4>Summer Camps</h4>
-                    <p>July 7-10</p>
-                    <p>August 11-14</p>
-                </div>
-            </div>
-            
-            <div class="schedule-item">
-                <div class="schedule-icon-container">
-                    <svg viewBox="0 0 24 24" class="schedule-detail-icon">
-                        <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
-                        <path d="M15.71,7.29a1,1,0,0,0-1.42,0L12,9.59,9.71,7.29A1,1,0,1,0,8.29,8.71L10.59,11,8.29,13.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,12.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L13.41,11l2.3-2.29A1,1,0,0,0,15.71,7.29Z"/>
-                    </svg>
-                </div>
-                <div class="schedule-details">
-                    <h4>Fall Tryouts</h4>
-                    <p>August 18-19</p>
-                </div>
-            </div>
-            
-            <div class="modal-footer">
-                <p>For the complete schedule and latest updates, join our Spond group:</p>
-                <a href="https://spond.com/invite/XIXGR" target="_blank" class="spond-modal-link">
-                    <svg viewBox="0 0 24 24" class="spond-icon">
-                        <path d="M21.5 12a9.5 9.5 0 1 1-9.5-9.5 9.5 9.5 0 0 1 9.5 9.5zm-9.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4.5-1.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0zm-4.5 7.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
-                    </svg>
-                    Girls Volleyball Spond Group
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal for Cognito Form -->
-    <div id="formModal" class="modal">
-        <div class="modal-content" style="background-color: #fff;">
-            <span class="close-modal">&times;</span>
-            <h3>6-8th Grade Summer Volleyball Camp Registration</h3>
-            <div id="cognitoFormContainer">
-                <!-- Cognito Form using iframe -->
-                <iframe src="https://www.cognitoforms.com/f/x_8dY784VEGNXbR0jzqOCA/5" allow="payment" style="border:0;width:100%;background-color:#fff;display:block;" height="748"></iframe>
-                <script src="https://www.cognitoforms.com/f/iframe.js"></script>
-            </div>
-        </div>
-    </div>
-
-    <!-- Coach Bio Modal -->
+    <!-- Modals -->
     <div id="coachBioModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -492,318 +139,18 @@
         </div>
     </div>
 
-    <!-- Roster Modals -->
-    <div id="varsityModal" class="modal">
+    <div id="roster-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h3>Varsity Roster</h3>
-            <div class="roster-grid">
-                <div class="player-card"><span class="player-number">1</span><span class="player-name">Tiffany Espinoza</span><span class="player-position">S</span></div>
-                <div class="player-card"><span class="player-number">2</span><span class="player-name">Chloe Ho</span><span class="player-position">DS/L</span></div>
-                <div class="player-card"><span class="player-number">3</span><span class="player-name">Cassie Naiome Babia</span><span class="player-position">DS/L</span></div>
-                <div class="player-card"><span class="player-number">4</span><span class="player-name">Chloe Jepsen</span><span class="player-position">M/RS</span></div>
-                <div class="player-card"><span class="player-number">6</span><span class="player-name">Isabel Curiel</span><span class="player-position">RS/M</span></div>
-                <div class="player-card"><span class="player-number">7</span><span class="player-name">Kaia Esteban</span><span class="player-position">S</span></div>
-                <div class="player-card"><span class="player-number">8</span><span class="player-name">Saren Oberst</span><span class="player-position">OH</span></div>
-                <div class="player-card"><span class="player-number">9</span><span class="player-name">Rylie Benge</span><span class="player-position">OH</span></div>
-                <div class="player-card"><span class="player-number">10</span><span class="player-name">Ina Yamada</span><span class="player-position">DS/L</span></div>
-                <div class="player-card"><span class="player-number">11</span><span class="player-name">Lola Mastrantonio</span><span class="player-position">OH</span></div>
-                <div class="player-card"><span class="player-number">13</span><span class="player-name">Mallak Kamel</span><span class="player-position">M</span></div>
-                <div class="player-card"><span class="player-number">14</span><span class="player-name">Ava Durtschi</span><span class="player-position">RS/OH</span></div>
-                <div class="player-card"><span class="player-number">16</span><span class="player-name">Leyla Danielson</span><span class="player-position">M</span></div>
+            <h3 id="roster-modal-title">Team Roster</h3>
+            <div id="roster-modal-grid" class="roster-grid">
+                <!-- Data populated by data-loader.js -->
             </div>
         </div>
     </div>
 
-    <div id="jvModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>Junior Varsity Roster</h3>
-            <div class="roster-grid">
-                <div class="player-card"><span class="player-number">3</span><span class="player-name">Alice Paulsen</span><span class="player-position">DS/L</span></div>
-                <div class="player-card"><span class="player-number">4</span><span class="player-name">Kayla Tran</span><span class="player-position">DS/L</span></div>
-                <div class="player-card"><span class="player-number">6</span><span class="player-name">Jett Cuenco</span><span class="player-position">PIN/M</span></div>
-                <div class="player-card"><span class="player-number">10</span><span class="player-name">Kora Meyer</span><span class="player-position">DS/L</span></div>
-                <div class="player-card"><span class="player-number">11</span><span class="player-name">Chloe Muehlhof</span><span class="player-position">PIN/M</span></div>
-                <div class="player-card"><span class="player-number">14</span><span class="player-name">Luna Lavelle</span><span class="player-position">PIN</span></div>
-                <div class="player-card"><span class="player-number">15</span><span class="player-name">Abegail Polidario</span><span class="player-position">S</span></div>
-                <div class="player-card"><span class="player-number">16</span><span class="player-name">Xochitl Mota</span><span class="player-position">DS/OH</span></div>
-                <div class="player-card"><span class="player-number">18</span><span class="player-name">Cara Jones</span><span class="player-position">PIN/M</span></div>
-                <div class="player-card"><span class="player-number">20</span><span class="player-name">Lily Ross</span><span class="player-position">PIN/M</span></div>
-                <div class="player-card"><span class="player-number">30</span><span class="player-name">Pooja Desai</span><span class="player-position">M</span></div>
-                <div class="player-card"><span class="player-number">44</span><span class="player-name">Maliah Lopez</span><span class="player-position">PIN/M</span></div>
-                <div class="player-card"><span class="player-number">45</span><span class="player-name">Hannah Tanga</span><span class="player-position">S</span></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="jv2Modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>JV2 Roster</h3>
-            <div class="roster-grid">
-                <div class="player-card"><span class="player-number">1</span><span class="player-name">Renee Fegurgur</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">2</span><span class="player-name">Leyla Mohamed</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">5</span><span class="player-name">Amber Nicolas</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">7</span><span class="player-name">Caroline Calderon</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">8</span><span class="player-name">Natalee Her</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">9</span><span class="player-name">Helen Truong</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">21</span><span class="player-name">Telinah Daniels</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">22</span><span class="player-name">Joy Kamonjo</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">31</span><span class="player-name">Riley Meyers</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">38</span><span class="player-name">Raine Perez</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">40</span><span class="player-name">Chioma Amukamara</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">47</span><span class="player-name">Kenza Johnson</span><span class="player-position"></span></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="jv3Modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>JV3 Roster</h3>
-            <div class="roster-grid">
-                <div class="player-card"><span class="player-number">12</span><span class="player-name">Sienna Taylor</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">13</span><span class="player-name">Samantha Webster</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">17</span><span class="player-name">Kiki Espinoza</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">19</span><span class="player-name">Phoenix Stanford</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">23</span><span class="player-name">Kennedi Roessler</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">24</span><span class="player-name">Maddie Petrov</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">25</span><span class="player-name">Renata Sanchez</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">26</span><span class="player-name">Petra Tanner</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">29</span><span class="player-name">Emily Soderberg</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">35</span><span class="player-name">West Baker</span><span class="player-position"></span></div>
-                <div class="player-card"><span class="player-number">48</span><span class="player-name">Everley Hamilton</span><span class="player-position"></span></div>
-            </div>
-        </div>
-    </div>
-
+    <script src="js/components.js"></script>
+    <script src="js/data-loader.js"></script>
     <script src="js/script.js"></script>
-    
-    <!-- Summer Schedule Modal Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById('summerScheduleModal');
-            const btn = document.getElementById('summerScheduleBtn');
-            const closeBtn = document.querySelector('.close-modal');
-            
-            // Open modal when button is clicked
-            btn.addEventListener('click', function() {
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-            
-            // Close modal when X is clicked
-            closeBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-                document.body.style.overflow = ''; // Re-enable scrolling
-            });
-            
-            // Close modal when clicking outside the modal content
-            window.addEventListener('click', function(event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape' && modal.style.display === 'flex') {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-    </script>
-    
-    <!-- Registration Form Modal Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const formModal = document.getElementById('formModal');
-            const openFormButton = document.getElementById('openFormButton');
-            const closeFormButton = formModal.querySelector('.close-modal');
-            
-            // Open modal when button is clicked
-            openFormButton.addEventListener('click', function() {
-                formModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-            
-            // Close modal when X is clicked
-            closeFormButton.addEventListener('click', function() {
-                formModal.style.display = 'none';
-                document.body.style.overflow = ''; // Re-enable scrolling
-            });
-            
-            // Close modal when clicking outside of it
-            window.addEventListener('click', function(event) {
-                if (event.target === formModal) {
-                    formModal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-    </script>
-    
-    <!-- Coach Bio Modal Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const coachBioModal = document.getElementById('coachBioModal');
-            const coachBioContent = document.getElementById('coachBioContent');
-            const fullBioBtns = document.querySelectorAll('.full-bio-btn');
-            const closeCoachBioBtn = coachBioModal.querySelector('.close-modal');
-            
-            // Coach bio data
-            const coachBios = {
-                loren: {
-                    name: 'Loren Anderson',
-                    position: 'Varsity Coach',
-                    motto: '"Play brave. Learn loud. Laugh often."',
-                    bio: `Loren Anderson brings over a decade of coaching experience and an unapologetically bold vision to Century High School Volleyball. As head coach of both the girls' and boys' varsity programs, he is known for fusing competitive intensity with an athlete-centered, joy-driven culture that values growth over perfection—and connection over control.
-                    
-                    A lifelong student of the game, Loren champions an ecological approach to coaching, favoring game-based learning, purposeful play, and meaningful decision-making over traditional drills and rote repetition. (If you're looking for cones and lines, you're probably in the wrong gym.)
-                    
-                    Before taking the reins at Century, Loren founded Rise Volleyball Academy in Idaho, where he built a thriving community grounded in athlete development and positive coaching. Today, that same philosophy powers the launch of Tualatin Valley Volleyball Club, a new and affordable option for local athletes who want to play hard, learn deeply, and travel less.
-                    
-                    Off the court, Loren writes and podcasts about modern coaching methods, ecological dynamics, and building cultures of trust, courage, and belonging. He's also a firm believer that volleyball is better when it's fun—and yes, that includes a steady supply of terrible dad jokes (you've been warned).
-                    
-                    In Loren's world, every rep is a chance to learn, and every player has something to teach us.`
-                },
-                amy: {
-                    name: 'Amy Henderson',
-                    position: 'Varsity Assistant Coach',
-                    motto: '',
-                    bio: `Amy grew up on the Oregon Coast and started playing volleyball in elementary school. After high school she attended Pacific University, where she also continued playing volleyball. Amy began coaching after college and has worked with athletes from 5th grade through high school. Most recently, she served as the assistant varsity coach for Century High School and coaches club for Tualatin Valley Volleyball Club.`
-                },
-                cameron: {
-                    name: 'Cameron Artz',
-                    position: 'JV Coach',
-                    motto: '',
-                    bio: `Cameron is originally from Pittsburgh and started playing volleyball in high school. He attended Virginia Tech where he continued his playing career. After college, Cameron began coaching at Olentangy Orange High School, in Ohio, as the boy's JV coach. He stayed in that position for four years before joining the Gahanna Lincoln Lions girl's program as the varsity assistant coach for one year prior to moving to Oregon. While in Oregon, Cameron has coached at Century High School and AJAX Volleyball Academy.`
-                },
-                katy: {
-                    name: 'Katy Artz',
-                    position: 'JV2 Coach',
-                    motto: '',
-                    bio: `Katy is originally from Columbus and started playing volleyball in middle school. She attended Ohio State University and began her coaching career. She has coached at various high schools in Ohio at the freshmen - varsity levels. She coached club volleyball at Rogue Volleyball club in Columbus. Katy also coached boys volleyball at the high school level and was both the boys and girls head coach at Gahanna Lincoln high school before moving to Oregon. While in Oregon, Katy has coached at Century High School and Athena Volleyball Academy.`
-                },
-                felicity: {
-                    name: 'Felicity Wilkinson',
-                    position: 'JV2 Coach',
-                    motto: '',
-                    bio: `Felicity grew up right here in Hillsboro and started playing volleyball at the age of eight. Her love for the sport continued even after her competitive playing career ended, evolving into a passion for coaching. She currently coaches at Tualatin Valley Volleyball Club and has been coaching with the City of Hillsboro for nine years. As a Century alum, she is excited to return to the program and share her joy, passion, and love for the game.`
-                },
-                rosalie: {
-                    name: 'Rosalie Artz',
-                    position: 'Assistant Coach (Toddler Division)',
-                    motto: '',
-                    bio: `Born in Columbus, Ohio, and raised on gym snacks and volleyball whistles, Rosalie has been in the gym since she was a week old. What started as courtside naps has evolved into full-on assistant coaching duties: shagging volleyballs, supervising net tear-downs, and offering spirited (and mostly squeaky) sideline commentary.
-
-Don't let the tiny shoes fool you—Rosalie brings big energy, big opinions, and even bigger hugs. If you hear enthusiastic babble or see someone pointing seriously at the net, chances are it's Coach Rosalie making her presence known.`
-                }
-            };
-            
-            // Open modal when full bio button is clicked
-            fullBioBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const coachKey = this.getAttribute('data-coach');
-                    const coach = coachBios[coachKey];
-                    
-                    if (coach) {
-                        coachBioContent.innerHTML = `
-                            <h3>${coach.name}</h3>
-                            <p class="coach-position-modal">${coach.position}</p>
-                            ${coach.motto ? `<p class="coach-motto-modal">${coach.motto}</p>` : ''}
-                            <div class="coach-bio-text">
-                                ${coach.bio.split('\n\n').map(paragraph => `<p>${paragraph.trim()}</p>`).join('')}
-                            </div>
-                        `;
-                        
-                        coachBioModal.style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-            });
-            
-            // Close modal when X is clicked
-            closeCoachBioBtn.addEventListener('click', function() {
-                coachBioModal.style.display = 'none';
-                document.body.style.overflow = '';
-            });
-            
-            // Close modal when clicking outside of it
-            window.addEventListener('click', function(event) {
-                if (event.target === coachBioModal) {
-                    coachBioModal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape' && coachBioModal.style.display === 'flex') {
-                    coachBioModal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-    </script>
-
-    <!-- Roster Modal Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const rosterButtons = document.querySelectorAll('.roster-team-button');
-            const modals = {
-                varsity: document.getElementById('varsityModal'),
-                jv: document.getElementById('jvModal'),
-                jv2: document.getElementById('jv2Modal'),
-                jv3: document.getElementById('jv3Modal')
-            };
-            
-            // Open modal when team button is clicked
-            rosterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const team = this.getAttribute('data-team');
-                    const modal = modals[team];
-                    if (modal) {
-                        modal.style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-            });
-            
-            // Close modal functionality for each modal
-            Object.values(modals).forEach(modal => {
-                const closeBtn = modal.querySelector('.close-modal');
-                
-                // Close when X is clicked
-                closeBtn.addEventListener('click', function() {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                });
-                
-                // Close when clicking outside modal
-                modal.addEventListener('click', function(event) {
-                    if (event.target === modal) {
-                        modal.style.display = 'none';
-                        document.body.style.overflow = '';
-                    }
-                });
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    Object.values(modals).forEach(modal => {
-                        if (modal.style.display === 'flex') {
-                            modal.style.display = 'none';
-                            document.body.style.overflow = '';
-                        }
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,150 @@
+{
+  "girls": {
+    "rosters": {
+      "varsity": [
+        { "number": 1, "name": "Tiffany Espinoza", "position": "S" },
+        { "number": 2, "name": "Chloe Ho", "position": "DS/L" },
+        { "number": 3, "name": "Cassie Naiome Babia", "position": "DS/L" },
+        { "number": 4, "name": "Chloe Jepsen", "position": "M/RS" },
+        { "number": 6, "name": "Isabel Curiel", "position": "RS/M" },
+        { "number": 7, "name": "Kaia Esteban", "position": "S" },
+        { "number": 8, "name": "Saren Oberst", "position": "OH" },
+        { "number": 9, "name": "Rylie Benge", "position": "OH" },
+        { "number": 10, "name": "Ina Yamada", "position": "DS/L" },
+        { "number": 11, "name": "Lola Mastrantonio", "position": "OH" },
+        { "number": 13, "name": "Mallak Kamel", "position": "M" },
+        { "number": 14, "name": "Ava Durtschi", "position": "RS/OH" },
+        { "number": 16, "name": "Leyla Danielson", "position": "M" }
+      ],
+      "jv": [
+        { "number": 3, "name": "Alice Paulsen", "position": "DS/L" },
+        { "number": 4, "name": "Kayla Tran", "position": "DS/L" },
+        { "number": 6, "name": "Jett Cuenco", "position": "PIN/M" },
+        { "number": 10, "name": "Kora Meyer", "position": "DS/L" },
+        { "number": 11, "name": "Chloe Muehlhof", "position": "PIN/M" },
+        { "number": 14, "name": "Luna Lavelle", "position": "PIN" },
+        { "number": 15, "name": "Abegail Polidario", "position": "S" },
+        { "number": 16, "name": "Xochitl Mota", "position": "DS/OH" },
+        { "number": 18, "name": "Cara Jones", "position": "PIN/M" },
+        { "number": 20, "name": "Lily Ross", "position": "PIN/M" },
+        { "number": 30, "name": "Pooja Desai", "position": "M" },
+        { "number": 44, "name": "Maliah Lopez", "position": "PIN/M" },
+        { "number": 45, "name": "Hannah Tanga", "position": "S" }
+      ],
+      "jv2": [
+        { "number": 1, "name": "Renee Fegurgur", "position": "" },
+        { "number": 2, "name": "Leyla Mohamed", "position": "" },
+        { "number": 5, "name": "Amber Nicolas", "position": "" },
+        { "number": 7, "name": "Caroline Calderon", "position": "" },
+        { "number": 8, "name": "Natalee Her", "position": "" },
+        { "number": 9, "name": "Helen Truong", "position": "" },
+        { "number": 21, "name": "Telinah Daniels", "position": "" },
+        { "number": 22, "name": "Joy Kamonjo", "position": "" },
+        { "number": 31, "name": "Riley Meyers", "position": "" },
+        { "number": 38, "name": "Raine Perez", "position": "" },
+        { "number": 40, "name": "Chioma Amukamara", "position": "" },
+        { "number": 47, "name": "Kenza Johnson", "position": "" }
+      ],
+      "jv3": [
+        { "number": 12, "name": "Sienna Taylor", "position": "" },
+        { "number": 13, "name": "Samantha Webster", "position": "" },
+        { "number": 17, "name": "Kiki Espinoza", "position": "" },
+        { "number": 19, "name": "Phoenix Stanford", "position": "" },
+        { "number": 23, "name": "Kennedi Roessler", "position": "" },
+        { "number": 24, "name": "Maddie Petrov", "position": "" },
+        { "number": 25, "name": "Renata Sanchez", "position": "" },
+        { "number": 26, "name": "Petra Tanner", "position": "" },
+        { "number": 29, "name": "Emily Soderberg", "position": "" },
+        { "number": 35, "name": "West Baker", "position": "" },
+        { "number": 48, "name": "Everley Hamilton", "position": "" }
+      ]
+    },
+    "schedule": [
+      { "category": "PRESEASON", "dates": "AUG 22 - SEP 2", "games": [
+        { "date": "Thu 8/28", "teams": "VAR", "opponent": "PAC Jamboree @ Forest Grove" },
+        { "date": "Thu 8/28", "teams": "JV", "opponent": "PAC Jamboree @ Sherwood" },
+        { "date": "Thu 8/28", "teams": "JV2/JV3", "opponent": "PAC Jamboree @ Glencoe" }
+      ]},
+      { "category": "REGULAR SEASON", "dates": "SEP 3 - OCT 23", "games": [
+        { "date": "Tue 9/2", "teams": "ALL", "opponent": "@ Southridge", "result": "V: W 3-1", "isWin": true },
+        { "date": "Thu 9/4", "teams": "ALL", "opponent": "Ida B. Wells", "result": "V: L 1-3", "isWin": false, "isHome": true },
+        { "date": "Sat 9/6", "teams": "JV2/JV3", "opponent": "@ Century Tournament" },
+        { "date": "Thu 9/11", "teams": "ALL", "opponent": "@ Liberty", "result": "V: W 3-0", "isWin": true },
+        { "date": "Sat 9/13", "teams": "V", "opponent": "@ Milwaukie Tournament" },
+        { "date": "Mon 9/15", "teams": "ALL", "opponent": "Sherwood", "result": "V: L 1-3", "isWin": false, "isHome": true },
+        { "date": "Wed 9/17", "teams": "ALL", "opponent": "@ Glencoe", "result": "V: L 1-3", "isWin": false },
+        { "date": "Sat 9/20", "teams": "V", "opponent": "@ Westview Tournament" },
+        { "date": "Sat 9/20", "teams": "JV", "opponent": "@ Southridge Tournament" },
+        { "date": "Mon 9/22", "teams": "ALL", "opponent": "@ Forest Grove", "result": "V: L 0-3", "isWin": false },
+        { "date": "Wed 9/24", "teams": "ALL", "opponent": "Newberg", "result": "V: W 3-0", "isWin": true, "isHome": true },
+        { "date": "Tue 9/30", "teams": "ALL", "opponent": "McMinnville", "result": "V: W 3-2", "isWin": true, "isHome": true },
+        { "date": "Sat 10/4", "teams": "V", "opponent": "@ Lakeridge Tournament" },
+        { "date": "Sat 10/4", "teams": "JV", "opponent": "@ Westview Tournament" },
+        { "date": "Sat 10/4", "teams": "JV2/JV3", "opponent": "@ Hilhi Tournament" },
+        { "date": "Mon 10/6", "teams": "ALL", "opponent": "Liberty", "result": "V: W 3-1", "isWin": true, "isHome": true },
+        { "date": "Wed 10/8", "teams": "ALL", "opponent": "@ Sherwood", "result": "V: L 0-3", "isWin": false },
+        { "date": "Sat 10/11", "teams": "V", "opponent": "@ Seaside Tournament" },
+        { "date": "Tue 10/14", "teams": "ALL", "opponent": "Glencoe", "result": "V: L 2-3", "isWin": false, "isHome": true },
+        { "date": "Thu 10/16", "teams": "ALL", "opponent": "Forest Grove (Senior Night)", "result": "V: L 1-3", "isWin": false, "isHome": true, "highlight": true },
+        { "date": "Mon 10/20", "teams": "ALL", "opponent": "@ Newberg", "result": "V: W 3-2", "isWin": true },
+        { "date": "Wed 10/22", "teams": "ALL", "opponent": "@ McMinnville", "result": "V: W 3-1", "isWin": true }
+      ]}
+    ],
+    "coaches": [
+      { "id": "loren", "name": "Loren Anderson", "position": "Varsity Coach", "motto": "Play brave. Learn loud. Laugh often.", "bio": "Loren Anderson brings over a decade of coaching experience and an unapologetically bold vision to Century High School Volleyball. As head coach of both the girls' and boys' varsity programs, he is known for fusing competitive intensity with an athlete-centered, joy-driven culture that values growth over perfection—and connection over control.\n\nA lifelong student of the game, Loren champions an ecological approach to coaching, favoring game-based learning, purposeful play, and meaningful decision-making over traditional drills and rote repetition. (If you're looking for cones and lines, you're probably in the wrong gym.)\n\nBefore taking the reins at Century, Loren founded Rise Volleyball Academy in Idaho, where he built a thriving community grounded in athlete development and positive coaching. Today, that same philosophy powers the launch of Tualatin Valley Volleyball Club, a new and affordable option for local athletes who want to play hard, learn deeply, and travel less.\n\nOff the court, Loren writes and podcasts about modern coaching methods, ecological dynamics, and building cultures of trust, courage, and belonging. He's also a firm believer that volleyball is better when it's fun—and yes, that includes a steady supply of terrible dad jokes (you've been warned).\n\nIn Loren's world, every rep is a chance to learn, and every player has something to teach us.", "image": "images/official-century-logo.png" },
+      { "id": "amy", "name": "Amy Henderson", "position": "Varsity Assistant Coach", "motto": "", "bio": "Amy grew up on the Oregon Coast and started playing volleyball in elementary school. After high school she attended Pacific University, where she also continued playing volleyball. Amy began coaching after college and has worked with athletes from 5th grade through high school. Most recently, she served as the assistant varsity coach for Century High School and coaches club for Tualatin Valley Volleyball Club.", "image": "images/official-century-logo.png" },
+      { "id": "cameron", "name": "Cameron Artz", "position": "JV Coach", "motto": "", "bio": "Cameron is originally from Pittsburgh and started playing volleyball in high school. He attended Virginia Tech where he continued his playing career. After college, Cameron began coaching at Olentangy Orange High School, in Ohio, as the boy's JV coach. He stayed in that position for four years before joining the Gahanna Lincoln Lions girl's program as the varsity assistant coach for one year prior to moving to Oregon. While in Oregon, Cameron has coached at Century High School and AJAX Volleyball Academy.", "image": "images/official-century-logo.png" },
+      { "id": "katy", "name": "Katy Artz", "position": "JV2 Coach", "motto": "", "bio": "Katy is originally from Columbus and started playing volleyball in middle school. She attended Ohio State University and began her coaching career. She has coached at various high schools in Ohio at the freshmen - varsity levels. She coached club volleyball at Rogue Volleyball club in Columbus. Katy also coached boys volleyball at the high school level and was both the boys and girls head coach at Gahanna Lincoln high school before moving to Oregon. While in Oregon, Katy has coached at Century High School and Athena Volleyball Academy.", "image": "images/official-century-logo.png" },
+      { "id": "felicity", "name": "Felicity Wilkinson", "position": "JV2 Coach", "motto": "", "bio": "Felicity grew up right here in Hillsboro and started playing volleyball at the age of eight. Her love for the sport continued even after her competitive playing career ended, evolving into a passion for coaching. She currently coaches at Tualatin Valley Volleyball Club and has been coaching with the City of Hillsboro for nine years. As a Century alum, she is excited to return to the program and share her joy, passion, and love for the game.", "image": "images/official-century-logo.png" },
+      { "id": "rosalie", "name": "Rosalie Artz", "position": "Assistant Coach (Toddler Division)", "motto": "", "bio": "Born in Columbus, Ohio, and raised on gym snacks and volleyball whistles, Rosalie has been in the gym since she was a week old. What started as courtside naps has evolved into full-on assistant coaching duties: shagging volleyballs, supervising net tear-downs, and offering spirited (and mostly squeaky) sideline commentary.\n\nDon't let the tiny shoes fool you—Rosalie brings big energy, big opinions, and even bigger hugs. If you hear enthusiastic babble or see someone pointing seriously at the net, chances are it's Coach Rosalie making her presence known.", "image": "images/official-century-logo.png" }
+    ]
+  },
+  "boys": {
+    "record": { "overall": "9-5", "league": "9-3", "rank": "#10" },
+    "rosters": {
+      "varsity": [
+        { "name": "Adam Duong", "position": "SR S/OP" },
+        { "name": "Alexander English", "position": "FR MB" },
+        { "name": "Finn English", "position": "SR MB" },
+        { "name": "Nathaniel Gaoiran", "position": "SR S" },
+        { "name": "Jonah Baliza", "position": "JR MB" },
+        { "name": "Tyler Bake", "position": "SR MB" },
+        { "name": "Yurijah Hawj", "position": "FR OH" },
+        { "name": "Coby Mooney", "position": "SO OH/OP" },
+        { "name": "Asher Moore", "position": "SO OP" },
+        { "name": "Joshua Moreno", "position": "JR OH/S" },
+        { "name": "Dade Vandomelen", "position": "JR OH/S" },
+        { "name": "Jace Tagumasi", "position": "FR DS/L" },
+        { "name": "Johnson Phan", "position": "JR L/S" },
+        { "name": "Chase Paulson", "position": "FR DS/L" },
+        { "name": "Anthony Nguyen", "position": "SR OP/S" },
+        { "name": "Alexander Tugano", "position": "SO OH/L" },
+        { "name": "Astin Thongtanunam", "position": "JR RS/OH" },
+        { "name": "Caleb Moua", "position": "SR OH" }
+      ]
+    },
+    "schedule": [
+      { "category": "2026 SEASON", "games": [
+        { "date": "Thu 3/19", "time": "W 2-0", "opponent": "vs TBD (Jamboree)" },
+        { "date": "Mon 4/6", "time": "W 2-0", "opponent": "vs Glencoe", "isHome": true },
+        { "date": "Mon 4/6", "time": "W 3-1", "opponent": "@ Forest Grove" },
+        { "date": "Thu 4/9", "time": "L 1-2", "opponent": "vs Liberty", "isHome": true },
+        { "date": "Sat 4/11", "time": "L 1-3", "opponent": "vs Sherwood" },
+        { "date": "Mon 4/13", "time": "W 2-0", "opponent": "@ Sherwood" },
+        { "date": "Thu 4/16", "time": "W 2-0", "opponent": "vs Wilsonville", "isHome": true },
+        { "date": "Thu 4/16", "time": "W 2-1", "opponent": "vs Hillsboro", "isHome": true },
+        { "date": "Wed 4/22", "time": "L 1-2", "opponent": "@ Glencoe" },
+        { "date": "Wed 4/22", "time": "L 0-3", "opponent": "vs Forest Grove" },
+        { "date": "Wed 4/29", "time": "W 3-2", "opponent": "@ Liberty" },
+        { "date": "Wed 5/6", "time": "W 2-0", "opponent": "vs Sherwood", "isHome": true },
+        { "date": "Wed 5/13", "time": "W 2-0", "opponent": "vs Hillsboro" },
+        { "date": "Wed 5/13", "time": "L 0-3", "opponent": "@ Wilsonville" },
+        { "date": "Wed 5/20", "time": "L 0-3", "opponent": "@ La Salle Prep" }
+      ]}
+    ],
+    "coaches": [
+      { "id": "mckinsey", "name": "Kinsey Barnett", "position": "Head Coach", "motto": "Compete with purpose. Build each other up.", "bio": "Bio coming soon!", "image": "images/official-century-logo.png" },
+      { "id": "ash", "name": "Ashlynn Bailey", "position": "Assistant Coach", "motto": "Unity through effort.", "bio": "Bio coming soon!", "image": "images/official-century-logo.png" }
+    ]
+  }
+}

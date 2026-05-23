@@ -1,11 +1,15 @@
 // Enhanced Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
+function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
     
     if (hamburger) {
+        // Remove existing listeners if any (to avoid duplicates)
+        const newHamburger = hamburger.cloneNode(true);
+        hamburger.parentNode.replaceChild(newHamburger, hamburger);
+        
         // Add touch-friendly click handling
-        hamburger.addEventListener('click', function(e) {
+        newHamburger.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             this.classList.toggle('active');
@@ -20,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-                if (hamburger.classList.contains('active')) {
-                    hamburger.classList.remove('active');
+            if (!newHamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                if (newHamburger.classList.contains('active')) {
+                    newHamburger.classList.remove('active');
                     navMenu.classList.remove('active');
                     document.body.classList.remove('nav-open');
-                    hamburger.setAttribute('aria-expanded', false);
+                    newHamburger.setAttribute('aria-expanded', false);
                     navMenu.setAttribute('aria-hidden', true);
                 }
             }
@@ -33,31 +37,40 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Close menu on escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && hamburger.classList.contains('active')) {
-                hamburger.classList.remove('active');
+            if (e.key === 'Escape' && newHamburger.classList.contains('active')) {
+                newHamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.classList.remove('nav-open');
-                hamburger.setAttribute('aria-expanded', false);
+                newHamburger.setAttribute('aria-expanded', false);
                 navMenu.setAttribute('aria-hidden', true);
-                hamburger.focus();
+                newHamburger.focus();
             }
+        });
+
+        // Close mobile menu when clicking on a nav link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (newHamburger.classList.contains('active')) {
+                    newHamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                    newHamburger.setAttribute('aria-expanded', false);
+                    navMenu.setAttribute('aria-hidden', true);
+                }
+            });
         });
     }
-    
-    // Close mobile menu when clicking on a nav link
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (hamburger && hamburger.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.classList.remove('nav-open');
-                hamburger.setAttribute('aria-expanded', false);
-                navMenu.setAttribute('aria-hidden', true);
-            }
-        });
-    });
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if components are being used
+    if (document.getElementById('main-header')) {
+        document.addEventListener('allComponentsLoaded', initNavigation);
+    } else {
+        initNavigation();
+    }
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

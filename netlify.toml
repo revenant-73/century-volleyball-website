@@ -3,17 +3,6 @@
   command = ""  # No build command needed for a static HTML site
 
 # Redirects and headers
-# Redirect removed coaches portal pages to home
-[[redirects]]
-  from = "/coaches.html"
-  to = "/index.html"
-  status = 301
-
-[[redirects]]
-  from = "/coaches-portal.html"
-  to = "/index.html"
-  status = 301
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
