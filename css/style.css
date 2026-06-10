@@ -384,7 +384,7 @@ button:hover, .btn:hover {
     fill: currentColor;
 }
 
-.spond-link {
+.sportsyou-link {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -401,21 +401,21 @@ button:hover, .btn:hover {
     justify-content: center;
 }
 
-.spond-link:hover {
+.sportsyou-link:hover {
     background: rgba(255, 255, 255, 0.15);
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.spond-icon {
+.sportsyou-icon {
     width: 1.2em;
     height: 1.2em;
     fill: currentColor;
     opacity: 0.8;
 }
 
-.spond-link:hover .spond-icon {
+.sportsyou-link:hover .sportsyou-icon {
     opacity: 1;
 }
 
@@ -666,7 +666,7 @@ button:hover, .btn:hover {
         font-size: 1rem;
     }
     
-    .spond-link {
+    .sportsyou-link {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
     }
@@ -700,7 +700,7 @@ button:hover, .btn:hover {
         width: 100%;
     }
     
-    .spond-link {
+    .sportsyou-link {
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
         width: 100%;
@@ -1168,7 +1168,7 @@ svg {
     margin-bottom: 1rem;
 }
 
-.spond-announcement {
+.sportsyou-announcement {
     background: linear-gradient(135deg, rgba(0, 128, 128, 0.1) 0%, rgba(10, 10, 10, 0.8) 100%);
     padding: var(--spacing-xl) 0;
     margin: 4rem 0;
@@ -1207,7 +1207,7 @@ svg {
     margin-top: 2rem;
 }
 
-.spond-button {
+.sportsyou-button {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
@@ -1228,7 +1228,7 @@ svg {
     box-shadow: 0 10px 20px rgba(0, 128, 128, 0.3);
 }
 
-.spond-button:hover {
+.sportsyou-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
@@ -1238,14 +1238,14 @@ svg {
     box-shadow: 0 15px 30px rgba(0, 128, 128, 0.5);
 }
 
-.spond-button svg {
+.sportsyou-button svg {
     width: 22px;
     height: 22px;
     fill: currentColor;
 }
 
 @media (max-width: 768px) {
-    .spond-announcement {
+    .sportsyou-announcement {
         padding: var(--spacing-md) 0;
         margin-bottom: var(--spacing-sm);
     }
@@ -1267,7 +1267,7 @@ svg {
         align-items: center;
     }
     
-    .spond-button {
+    .sportsyou-button {
         width: 100%;
         max-width: 280px;
         justify-content: center;
@@ -1410,7 +1410,7 @@ main {
     color: var(--accent-color);
 }
 
-.spond-modal-link {
+.sportsyou-modal-link {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -1425,7 +1425,7 @@ main {
     justify-content: center;
 }
 
-.spond-modal-link:hover {
+.sportsyou-modal-link:hover {
     background: var(--accent-color);
     color: #fff;
     transform: translateY(-2px);
